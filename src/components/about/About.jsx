@@ -48,7 +48,7 @@ const About = () => {
 
   return <>
     <div className="about container d-flex w-full flex-column align-items-center justify-content-center">
-            <motion.h2  initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
+            <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
             <div className='row w-full '>
                 <div className="col-md-12">
 
@@ -56,7 +56,7 @@ const About = () => {
                         <div className='col-md-8 d-flex flex-col align-items-start justify-content-start   '>
                             
                             <div class={style.info}>
-                                <motion.div initial={{x:-100 , opacity:0}} whileInView={{x:0 , opacity:1}} transition={{duration:1.5}} class={style.box}>
+                                <motion.div viewport={{once:true}} initial={{x:-100 , opacity:0}} whileInView={{x:0 , opacity:1}} transition={{duration:1.5}} class={style.box}>
                                     {/* <img decoding="async" src="images/avataaars (2).png" alt="" /> */}
                                     <div class={style.text}>
                                     <h3>Business Analysis</h3>
@@ -69,7 +69,7 @@ const About = () => {
                                     </p>
                                     </div>
                                 </motion.div>
-                                <motion.div initial={{x:-100 , opacity:0}} whileInView={{x:0 , opacity:1}} transition={{duration:1.7}} class={style.box}>
+                                <motion.div viewport={{once:true}} initial={{x:-100 , opacity:0}} whileInView={{x:0 , opacity:1}} transition={{duration:1.7}} class={style.box}>
                                     {/* <img decoding="async" src="images/avataaars (2).png" alt="" /> */}
                                     <div class={style.text}>
                                     <h3>Business Analysis</h3>
@@ -82,7 +82,7 @@ const About = () => {
                                     </p>
                                     </div>
                                 </motion.div>
-                                <motion.div initial={{x:-100 , opacity:0}} whileInView={{x:0 , opacity:1}} transition={{duration:1.9}} class={style.box}>
+                                <motion.div viewport={{once:true}} initial={{x:-100 , opacity:0}} whileInView={{x:0 , opacity:1}} transition={{duration:1.9}} class={style.box}>
                                     {/* <img decoding="async" src="images/avataaars (2).png" alt="" /> */}
                                     <div class={style.text}>
                                     <h3>Business Analysis</h3>

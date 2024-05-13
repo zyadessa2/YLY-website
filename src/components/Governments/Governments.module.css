@@ -3,3 +3,16 @@
     font-weight: 800;
     color: #b4b3b3 !important;
   }
+
+  .egyMap{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    margin: auto;
+  }
+
+  @media (max-width: 767px) {
+    .egyMap{
+      height: 60vh;
+    }
+  }

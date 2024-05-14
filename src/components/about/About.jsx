@@ -47,7 +47,7 @@ const About = () => {
     }
 
   return <>
-    <div className="about container d-flex w-full flex-column align-items-center justify-content-center">
+    <div className="about container d-flex w-full flex-column align-items-center justify-content-center" id="about">
             <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
             <div className='row w-full '>
                 <div className="col-md-12">

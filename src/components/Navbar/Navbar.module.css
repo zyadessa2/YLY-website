@@ -1,10 +1,11 @@
 .header{
+    z-index: 4;
     padding: 0px 50px;
     background-color: white;
     position: relative;
     -webkit-box-shadow:0 0 10px #ddd;
     -moz-box-shadow:0 0 10xp #ddd;
-    box-shadow:0 0 10px #ddd;
+    box-shadow:0 0 10px #4f7db9;
   }
   @media (max-width:767px) {
     .header {
@@ -50,7 +51,7 @@
     align-items: center;
     height: 55px;
     position: relative;
-    color: black;
+    color: rgb(214, 213, 213);
     padding: 0 25px;
     overflow: hidden;
     transition: var(--main-transition);
@@ -79,7 +80,7 @@
   }
   .header .mainNav > li >a:hover{
     color: var(--main-color);
-    background-color: #fafafa;
+    background-color: #383838;
   }
   .header .mainNav > li >a:hover::before{
     left: 0;

@@ -3,3 +3,59 @@
     font-weight: 800;
     color: #b4b3b3 !important;
   }
+
+  .articles{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+  }
+  /* .articles .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+  } */
+  .articles .container .box{
+  box-shadow: 0 2px 15px rgba(255, 245, 245, 0.1);
+  background-color: 40484e;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform var(--main-transition), box-shadow var(--main-transition);
+  }
+  .articles .container .box:hover{
+    transform: translateY(-10px); /* عشان يطلع فوق لما اعمل هوفر */
+    box-shadow: 0 2px 15px rgb(0 0 0 / 25%);
+  }
+  .articles .container .box img{
+    margin: 10px 0px;
+    max-width: 100%;
+  }
+  .articles .container .box .content{
+  padding: 20px;
+  }
+  .articles .container .box .content h3{
+    color: #d1d0d0;
+    margin: 0;
+  }
+  .articles .container .box .content p{
+    margin: 10px 0 0;
+    line-height: 1.5;
+    color: #a3a3a3;
+  }
+  .articles .container .box .info{
+    padding: 15px;
+    border-top: 1px solid #E6E6E7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .articles .container .box .info a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--main-color);
+  }
+  .articles .container .box .info i{
+    color: var(--main-color-alt);
+    font-size: 25px;
+    margin-right: 10px;
+  }

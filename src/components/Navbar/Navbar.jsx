@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import style from './Navbar.module.css'
 const Navbar = () => {
   return <>
-        <div class={`${style.header} `} id="header">
+        <div class={`${style.header} bg-dark`} id="header">
         <div class={style.container}>
             <a href="#" class={style.logo}>YLY</a>
               <ul class={style.mainNav}>

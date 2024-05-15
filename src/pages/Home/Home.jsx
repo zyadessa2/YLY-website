@@ -50,11 +50,11 @@ const Home = () => {
     </div>:<div className="backGroung">
       <Hero/>
       <About/>
+      <Governments/>
       <OurGoals/>
       <News/>
       <LatestEvents/>
       <Board/>
-      <Governments/>
     </div>}
     
 

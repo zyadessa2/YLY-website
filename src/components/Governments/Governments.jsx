@@ -56,8 +56,8 @@ const Governments = () => {
   }, []);
 
   return <>
-  <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}}  whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Governments" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
-    <div className=" image m-auto w-75 position-relative ">
+  {/* <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}}  whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Governments" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2> */}
+    <div className=" image m-auto w-75 position-relative mt-5 " id="governments">
       <img className={style.egyMap} src={egyMap} alt="" />
     
       <div className='w-full vh-100 potition-absolute d-flex align-items-center justify-content-center rounded-full 

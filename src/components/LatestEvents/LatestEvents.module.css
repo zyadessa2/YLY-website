@@ -62,14 +62,14 @@
     text-align: center;
     margin: 40px 0 0;
     font-size: 30px;
-    color: #285588;
+    color: #5595b3;
   }
   .events .description{
     margin: 5px auto;
     text-align: center;
     line-height: 1.7;
     font-size: 19px;
-    color: #4e4e4e;
+    color: #919191;
     width: 90%;
   }
   .events .subscribe{

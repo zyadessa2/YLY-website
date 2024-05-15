@@ -6,7 +6,7 @@ import belo from '../../images/character.png'
 const Hero = () => {
   return <>
 
-  <div class={style.landing}>
+  <div class={style.landing} >
           <div class={`${style.container} container`}>
             
               <div class={`${style.text}`}>

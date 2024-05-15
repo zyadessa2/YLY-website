@@ -6,7 +6,7 @@ import img from '../../images/20230308_085330.jpg'
 
 const News = () => {
   return <>
-    <div class={style.articles} id="articles">
+    <div class={style.articles} id="news">
     <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Articles" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
       <div class={`${style.container} row d-flex justify-content-center g-3 m-auto align-items-center container`}>
         <motion.div  viewport={{once:true}} initial={{x:-50 , opacity:0}} whileInView={{x:0 , opacity:1  }} transition={{duration:1.4}} class={`${style.box} col-md-3 m-4 `}>

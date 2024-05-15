@@ -5,7 +5,7 @@
 }
 
  .info .box {
-    background-color: #40484e;
+    background-color: #2d789c;
     padding: 20px;
     margin-bottom: 10px;
     border-radius: 6px;
@@ -29,7 +29,7 @@
     width: 0;
     height: 0;
     transform: translate(-50%, -50%);
-    background-color: #424a50;
+    background-color: #286c8b;
     z-index: -1;
     transition: var(--main-transition);
   }
@@ -47,6 +47,7 @@
     }
   }
    .info .box h3 {
+    color: rgb(236, 236, 236);
     margin: 0;
     font-size: 25px;
   }

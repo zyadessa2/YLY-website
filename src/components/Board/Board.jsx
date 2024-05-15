@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import style from './Board.module.css'
 import AnimatedText from '../AnimatedText'
-import img from '../../images/download.jpg'
+import img from '../../images/download.webp'
 
 const Board = () => {
   return <>

@@ -5,7 +5,7 @@ import style from './About.module.css'
 import { motion } from "framer-motion";
 import Slider from 'react-slick'
 
-import belo from '../../images/character.png'
+import belo from '../../images/character.webp'
 
 
 const About = () => {

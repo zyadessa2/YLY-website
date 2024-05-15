@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import React from 'react'
 import AnimatedText from '../AnimatedText'
 import style from './News.module.css'
-import img from '../../images/20230308_085330.jpg'
+import img from '../../images/20230308_085330.webp'
 
 const News = () => {
   return <>

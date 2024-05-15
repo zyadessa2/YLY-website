@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import img from '../../images/20221005_110951.jpg'
+import img from '../../images/20221005_110951.webp'
 import AnimatedText from '../AnimatedText'
 import { motion } from "framer-motion";
 import style from './LatestEvents.module.css'

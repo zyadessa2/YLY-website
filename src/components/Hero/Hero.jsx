@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 import style from './Hero.module.css'
-import belo from '../../images/character.png'
+import belo from '../../images/character.webp'
 
 const Hero = () => {
   return <>

@@ -1,11 +1,11 @@
 import React from 'react'
 import style from './Footer.module.css';
-import img1 from '../../images/YLY 1_White .png'
-import img2 from '../../images/20221005_094216.jpg'
-import img3 from '../../images/20221005_110951.jpg'
-import img4 from '../../images/20230308_085330.jpg'
-import img5 from '../../images/20230308_140817.jpg'
-import img6 from '../../images/20221005_110951.jpg'
+import img1 from '../../images/20221005_110951.webp'
+import img2 from '../../images/20221005_110951.webp'
+import img3 from '../../images/20221005_110951.webp'
+import img4 from '../../images/20221005_110951.webp'
+import img5 from '../../images/20221005_110951.webp'
+import img6 from '../../images/20221005_110951.webp'
 const Footer = () => {
 
   let currentYear = new Date().getFullYear();

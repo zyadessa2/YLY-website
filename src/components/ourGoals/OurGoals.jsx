@@ -2,7 +2,7 @@ import React from 'react'
 import AnimatedText from '../AnimatedText'
 import { motion } from 'framer-motion'
 import style from './OurGoals.module.css'
-import img from '../../images/20221005_110951.jpg'
+import img from '../../images/20221005_110951.webp'
 
 const OurGoals = () => {
   return <>

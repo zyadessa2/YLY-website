@@ -1,0 +1,25 @@
+.formLogin{
+    border-radius: 10px;
+    box-shadow: 0 .1rem .5rem rgb(56, 107, 131);
+    animation: up-and-down 4s linear infinite;
+}
+
+
+@media (max-width:767px) {
+    .imgLogin{
+    display: none;
+    }
+    .formLogin{
+        margin: 90px 0px;
+    }
+  }
+
+  @keyframes up-and-down{ 
+    0%,
+    100% {
+      top:5px;
+    }
+    50%{
+      top: -10px;
+    }
+  }

@@ -253,3 +253,11 @@ background-color: #d1114e9a;
 .right-full {
   right: 100%;
 }
+.login{
+overflow-x: hidden;
+}
+.ADD{
+  border-radius: 10px;
+  width:30px;
+  margin-top: 10px;
+}

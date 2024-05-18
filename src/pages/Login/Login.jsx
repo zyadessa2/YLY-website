@@ -27,6 +27,7 @@ const Login = () => {
             <button className='mt-3 mb-3 btn borderbuttonSignin btn btn-primary w-100 text-white '>Sign in</button>
             <span className='text-center forgetpass fs-6 text-primary'>Forget your password?</span>
           </form>
+          <p className='ps-4 pt-3 pb-1 fs-5 noaccount text-danger'>Don't have an account? <Link to='/signup'>Sign up</Link></p>
           </div>
           <div className="col-md-5">
             <img className={style.imgLogin} src={img} alt="" />

@@ -6,6 +6,7 @@ import img3 from '../../images/20221005_110951.webp'
 import img4 from '../../images/20221005_110951.webp'
 import img5 from '../../images/20221005_110951.webp'
 import img6 from '../../images/20221005_110951.webp'
+
 const Footer = () => {
 
   let currentYear = new Date().getFullYear();
@@ -22,13 +23,18 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="#" class={style.twitter}>
+              <a href="#" class={style.instagram}>
                 <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
             <li>
-              <a href="#" class={style.youtube}>
+              <a href="#" class={style.tiktok}>
                 <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#" class={style.linkedIn}>
+                <i class="fa-brands fa-linkedin fs-5"></i>
               </a>
             </li>
           </ul>
@@ -63,12 +69,12 @@ const Footer = () => {
           </div>
         </div>
         <div class={style.footerGallery}>
-          <img decoding="async" src={img5} alt="" />
-          <img decoding="async" src={img2} alt="" />
-          <img decoding="async" src={img3} alt="" />
-          <img decoding="async" src={img6} alt="" />
-          <img decoding="async" src={img5} alt="" />
-          <img decoding="async" src={img6} alt="" />
+          <img decoding="async"  src={img5} alt="yly" />
+          <img decoding="async"  src={img2} alt="yly" />
+          <img decoding="async"  src={img3} alt="yly" />
+          <img decoding="async"  src={img6} alt="yly" />
+          <img decoding="async"  src={img5} alt="yly" />
+          <img decoding="async"  src={img6} alt="yly" />
         </div>
       </div>
       <p class={style.copyright}>copyright&copy; <span>{currentYear}</span></p>

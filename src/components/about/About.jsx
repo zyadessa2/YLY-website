@@ -3,25 +3,10 @@ import AnimatedText from '../AnimatedText'
 import { useInView, useMotionValue, useSpring } from 'framer-motion';
 import style from './About.module.css'
 import { motion } from "framer-motion";
-import Slider from 'react-slick'
-
 import belo from '../../images/character.webp'
 
-
 const About = () => {
-
-    var settings = {
-        dots: true,
-        infinite: true,
-        autoplay:true,
-        autoplaySpeed:2000,
-        arrows:false,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      };
-
-
+    
     const AnimatedNumbers = ({value}) =>{
         const ref = useRef(null);
         const motionValue = useMotionValue(0);
@@ -106,7 +91,7 @@ const About = () => {
                         </div>
 
                         <div className="col-md-4 d-flex align-items-center justify-content-center">
-                            <img className='w-100 belo' src={belo} alt="" />
+                            <img className='w-100 belo' src={belo} alt="belo"  />
                         </div>
                     </div>
                     

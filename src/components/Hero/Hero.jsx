@@ -1,5 +1,4 @@
 import React from 'react'
-import Slider from 'react-slick'
 import style from './Hero.module.css'
 import belo from '../../images/character.webp'
 
@@ -16,7 +15,7 @@ const Hero = () => {
               </div>
 
               <div class={`${style.image} `}>
-                  <img src={belo} alt="" />
+                  <img src={belo} alt="belo" />
               </div>
           </div>
           <a href="#about" class={style.goDown}>

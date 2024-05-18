@@ -13,7 +13,7 @@ const Board = () => {
                 <motion.div  initial={{scale:.6 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}} className={`${style.sizeTop} col-md-2 col-sm-4`}>
                     <div class={`${style.card} pb-5`}>
                         <div className={style.image}>
-                            <img src={img} alt="" />
+                            <img src={img} alt="board" />
                         </div>
                         <div className={style.line}></div>
                         <div class={style.text}>
@@ -25,7 +25,7 @@ const Board = () => {
                 <motion.div  initial={{scale:.6 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}} className={`${style.sizeTop}  col-md-2 mt-5 col-sm-4`}>
                     <div class={style.card}>
                         <div className={style.image}>
-                            <img src={img} alt="" />
+                            <img src={img} alt="board" />
                         </div>
                         <div className={style.line}></div>
                         <div class={style.text}>
@@ -39,7 +39,7 @@ const Board = () => {
               <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
                 <div class={style.card}>
                     <div className={style.image}>
-                            <img src={img} alt="" />
+                            <img src={img} alt="board" />
                         </div>
                         <div className={style.line}></div>
                     <div class={style.text}>
@@ -51,7 +51,7 @@ const Board = () => {
               <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
                 <div class={style.card}>
                     <div className={style.image}>
-                            <img src={img} alt="" />
+                            <img src={img} alt="board" />
                         </div>
                         <div className={style.line}></div>
                     <div class={style.text}>
@@ -63,7 +63,7 @@ const Board = () => {
               <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
                 <div class={style.card}>
                     <div className={style.image}>
-                            <img src={img} alt="" />
+                            <img src={img} alt="board" />
                         </div>
                         <div className={style.line}></div>
                     <div class={style.text}>
@@ -75,7 +75,7 @@ const Board = () => {
               <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
                 <div class={style.card}>
                     <div className={style.image}>
-                            <img src={img} alt="" />
+                            <img src={img} alt="board" />
                         </div>
                         <div className={style.line}></div>
                     <div class={style.text}>
@@ -87,7 +87,7 @@ const Board = () => {
               <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
                 <div class={style.card}>
                     <div className={style.image}>
-                            <img src={img} alt="" />
+                            <img src={img} alt="board" />
                         </div>
                         <div className={style.line}></div>
                     <div class={style.text}>
@@ -99,7 +99,7 @@ const Board = () => {
               <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
                 <div class={style.card}>
                     <div className={style.image}>
-                            <img src={img} alt="" />
+                            <img src={img} alt="board" />
                         </div>
                         <div className={style.line}></div>
                     <div class={style.text}>
@@ -111,7 +111,7 @@ const Board = () => {
               <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
                 <div class={style.card}>
                     <div className={style.image}>
-                            <img src={img} alt="" />
+                            <img src={img} alt="board" />
                         </div>
                         <div className={style.line}></div>
                     <div class={style.text}>
@@ -122,88 +122,6 @@ const Board = () => {
               </motion.div>
             </div>
         </div>
-
-        {/* <div class={style.container}>
-            <div class={`${style.cards} row mt-5 justify-content-center aligin-items-center m-auto`}>
-                        <motion.div  initial={{scale:.6 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}} className={`${style.sizeTop} col-md-2 col-sm-4`}>
-                    <div class={style.card}>
-                            <img src={img} alt="" />
-                        <div class={style.text}>
-                            <h3>Dr/Ashraf sobhy</h3>
-                            <span>Minister of Youth </span>
-                        </div>
-                    </div>
-                </motion.div>
-                <motion.div  initial={{scale:.6 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}} className={`${style.sizeTop}  col-md-2 col-sm-4`}>
-                    <div class={style.card}>
-                        <picture>
-                            <img src={img} alt="" />
-                        </picture>
-                        <div class={style.text}>
-                            <h3>Dr/Ashraf sobhy</h3>
-                            <span>Minister of Youth </span>
-                        </div>
-                    </div>
-                </motion.div>
-            </div>
-            <div class={`${style.cards} mt-5 row justify-content-center aligin-items-center m-auto`}>
-              <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
-                <div class={style.card}>
-                    <picture>
-                        <img src={img} alt="" />
-                    </picture>
-                    <div class={style.text}>
-                        <h3>Dr/Ashraf sobhy</h3>
-                        <span>Minister of Youth </span>
-                    </div>
-                </div>
-              </motion.div>
-              <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
-                <div class={style.card}>
-                    <picture>
-                        <img src={img} alt="" />
-                    </picture>
-                    <div class={style.text}>
-                        <h3>Dr/Ashraf sobhy</h3>
-                        <span>Minister of Youth</span>
-                    </div>
-                </div>
-              </motion.div>
-              <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
-                <div class={style.card}>
-                    <picture>
-                        <img src={img} alt="" />
-                    </picture>
-                    <div class={style.text}>
-                        <h3>Dr/Ashraf sobhy</h3>
-                        <span>Minister of Youth</span>
-                    </div>
-                </div>
-              </motion.div>
-              <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
-                <div class={style.card}>
-                    <picture>
-                        <img src={img} alt="" />
-                    </picture>
-                    <div class={style.text}>
-                        <h3>Dr/Ashraf sobhy</h3>
-                        <span>Minister of Youth</span>
-                    </div>
-                </div>
-              </motion.div>
-              <motion.div initial={{y:50 , opacity:0}} whileInView={{y:0 , opacity:1  }} transition={{duration:1.4}} className={`${style.size} mt-5 col-md-2 col-sm-3`}>
-                <div class={style.card}>
-                    <picture>
-                        <img src={img} alt="" />
-                    </picture>
-                    <div class={style.text}>
-                        <h3>Dr/Ashraf sobhy</h3>
-                        <span>Minister of Youth</span>
-                    </div>
-                </div>
-              </motion.div>
-            </div>
-        </div> */}
        
     </div>
   </>

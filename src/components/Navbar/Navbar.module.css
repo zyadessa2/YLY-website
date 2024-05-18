@@ -56,6 +56,7 @@
     overflow: hidden;
     transition: var(--main-transition);
   }
+  
   @media (max-width:767px) {
     .header .mainNav > li > a{
       padding: 10px;

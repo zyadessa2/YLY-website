@@ -20,7 +20,7 @@
     padding-bottom: 120px;
   }
   .landing .text{
-    z-index: 4;
+    z-index: 1;
     flex: 1;
   }
 

@@ -5,18 +5,21 @@ const Navbar = () => {
   return <>
         <div class={`${style.header} bg-dark`} id="header">
         <div class={style.container}>
-            <a href="#" class={style.logo}>YLY</a>
+            <Link to={'/'} class={style.logo}>YLY</Link>
               <ul class={style.mainNav}>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#ourGoals">Goals</a></li>
-                  <li><a href="#news">News</a></li>
-                  <li><a href="#board">Board</a></li>
-                  <li><a href="#governments">Governments</a></li>
+                  <li><a title='tst' href="#about">About</a></li>
+                  <li><a title='tst' href="#ourGoals">Goals</a></li>
+                  <li><a title='tst' href="#news">News</a></li>
+                  <li><a title='tst' href="#board">Board</a></li>
+                  <li><a title='tst' href="#governments">Governments</a></li>
               </ul>
               <ul className={style.social}>
-                <li className='pe-3'><a href="#"><i class="fab fa-facebook-f fs-5"></i></a></li>
-                <li className='pe-3'><a href="#"><i class="fa-brands fa-instagram fs-5"></i></a></li>
-                <li className='pe-3'><a href="#"><i class="fa-brands fa-tiktok fs-5"></i></a></li>
+                <li className='pe-3'><a title='tst' href="#"><i class="fab fa-facebook-f fs-5"></i></a></li>
+                <li className='pe-3'><a title='tst' href="#"><i class="fa-brands fa-instagram fs-5"></i></a></li>
+                <li className='pe-3'><a title='tst' href="#"><i class="fa-brands fa-tiktok fs-5"></i></a></li>
+                <li className='pe-3 '><a title='tst' href="#"><i class="fa-brands fa-linkedin fs-5"></i></a></li>
+                <li className='pe-3 '><Link to={'login'} title='tst' href="#"><span>login</span></Link></li>
+                <li className='pe-3 '><Link to={'signup'} title='tst' href="#"><span>sign up</span></Link></li>
               </ul>            
         </div>
     </div>

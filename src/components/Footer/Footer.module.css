@@ -52,11 +52,14 @@
   .footer .box .social .facebook:hover {
     background-color: #1877f2;
   }
-  .footer .box .social .twitter:hover {
-    background-color: #f27d1d;
+  .footer .box .social .instagram:hover {
+    background-color: #dd731c;
   }
-  .footer .box .social .youtube:hover {
+  .footer .box .social .tiktok:hover {
     background-color: #665959;
+  }
+  .footer .box .social .linkedIn:hover {
+    background-color: #4478b3;
   }
   .footer .box .text {
     line-height: 2;

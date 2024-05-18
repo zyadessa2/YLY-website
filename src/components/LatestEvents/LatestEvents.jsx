@@ -65,7 +65,7 @@ const LatestEvents = () => {
                 </div>
             </div>
 
-            <motion.div initial={{ scale :.6,opacity:0}} whileInView={{scale:1, opacity:1  }} transition={{duration:1.5}} class={style.subscribe}>
+            <motion.div viewport={{once:true}} initial={{ scale :.6,opacity:0}} whileInView={{scale:1, opacity:1  }} transition={{duration:1.5}} class={style.subscribe}>
               <form action="">
                 <input type="email" placeholder="Enter Your Email" />
                 <input type="submit" value="Subscribe" />

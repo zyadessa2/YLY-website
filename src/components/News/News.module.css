@@ -15,14 +15,20 @@
     gap: 40px;
   } */
   .articles .container .box{
+    margin: 0px 50px ;
   box-shadow: 0 2px 15px rgba(255, 245, 245, 0.1);
   background-color: 40484e;
   border-radius: 6px;
   overflow: hidden;
   transition: transform var(--main-transition), box-shadow var(--main-transition);
   }
+  @media (max-width:767px) {
+    .box {
+      transform: translateX(-50px);
+    }
+  }
   .articles .container .box:hover{
-    transform: translateY(-10px); /* عشان يطلع فوق لما اعمل هوفر */
+    transform: translateY(-10px);
     box-shadow: 0 2px 15px rgb(0 0 0 / 25%);
   }
   .articles .container .box img{

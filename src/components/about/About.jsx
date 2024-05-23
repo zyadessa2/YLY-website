@@ -82,14 +82,7 @@ const About = () => {
                                 </motion.div>
                                 
                             </div>
-                            {/* <p className=' text-center colorAbout'>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Aspernatur aperiam distinctio, nulla amet perferendis commodi deleniti cum,
-                            tempora voluptate harum accusantium tenetur 
-                            laborum facilis nesciunt quos beatae ipsa id fuga?
-                            </p> */}
                         </div>
-
                         <div className="col-md-4 d-flex align-items-center justify-content-center">
                             <img className='w-100 belo' src={belo} alt="belo"  />
                         </div>

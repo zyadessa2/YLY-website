@@ -246,7 +246,8 @@ background-color: #d1114e9a;
 }
 @media (max-width: 767px) {
   .belo{
-    max-width: 60%
+    /* max-width: 60% */
+    display: none;
   }
 }
 

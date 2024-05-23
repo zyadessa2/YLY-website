@@ -37,7 +37,7 @@ const Home = () => {
 
   return <>
   <TransitionEffect/>
-  <div className="backGroung">
+  <div className="body">
       <Hero/>
       <About/>
       <Governments/>

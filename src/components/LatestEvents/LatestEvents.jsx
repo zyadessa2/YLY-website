@@ -28,7 +28,8 @@ const LatestEvents = () => {
   counter()
 
   return <>
-  <div class={`${style.events} container`} id="events">
+  <div className="latest">
+  < div class={`${style.events} container `} id="events">
         <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Latest Events" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
           <div class={style.container}>
             <div className="row">
@@ -72,7 +73,9 @@ const LatestEvents = () => {
               </form>
             </motion.div>
           </div>
-        </div>
+    </div>
+  </div>
+  
   </>
 }
 

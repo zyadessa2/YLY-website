@@ -46,7 +46,7 @@ var settings = {
   };
 
   return <>
-    <div class={`${style.articles} bg-dark`} id="news">
+    <div class={`${style.articles} articals`} id="news">
     <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Articles" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
       {Flag?<>
         <div class={`${style.container} row d-flex justify-content-center g-3 m-auto align-items-center container`}>
@@ -83,12 +83,12 @@ var settings = {
             <i class="fas fa-long-arrow-alt-right"></i>
           </div>
         </motion.div>
-        <button className='btn btn-primary w-25 mt-4'>Read More</button>
+        <button className='btn ylyBlueBg text-white w-25 mt-4'>Read More</button>
       </div>
       </> : <>
       <div class={`${style.container} container m-auto row d-flex justify-content-between align-items-center`}>
       <Slider {...settings} >
-      <motion.div    class={`${style.box} col-md-12   `}>
+      <motion.div    class={`${style.box} col-md-3  `}>
           <img src={img} alt="" />
           <div class={style.content}>
             <h3>Text Title</h3>
@@ -99,7 +99,7 @@ var settings = {
             <i class="fas fa-long-arrow-alt-right"></i>
           </div>
         </motion.div>
-        <motion.div   class={`${style.box} col-md-3 `}>
+        <motion.div   class={`${style.box} col-md-3`}>
           <img src={img} alt="" />
           <div class={style.content}>
             <h3>Text Title</h3>
@@ -110,7 +110,7 @@ var settings = {
             <i class="fas fa-long-arrow-alt-right"></i>
           </div>
         </motion.div>
-        <motion.div   class={`${style.box} col-md-3 `}>
+        <motion.div   class={`${style.box} col-md-3`}>
           <img src={img} alt="" />
           <div class={style.content}>
             <h3>Text Title</h3>

@@ -13,6 +13,9 @@ module.exports = {
       fontFamily: {
         mont: ['var(--font-mont)'],
       },
+      translate: {
+        '-50': '-50px',
+      },
       colors:{
         dark: "#1b1b1b",
         light: "#f5f5f5",

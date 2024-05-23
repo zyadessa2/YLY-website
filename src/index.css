@@ -63,7 +63,7 @@ background-image: linear-gradient(135deg, white 25%, transparent 25%),
 background-size: 30px 30px;
 }
 :root{
-  --main-color:#2196f3;
+  /* --main-color:#fe8f01; */
   --main-color-alt:#1787e0;
   --main-transition:0.3s;
   --main-padding-top:100px;
@@ -73,6 +73,9 @@ background-size: 30px 30px;
 body {
   font-family: "Cairo", sans-serif;
   overflow-x: hidden;
+  background-color: #36669d;
+  background-image: linear-gradient(315deg, #fe8f01 0%, #36669d 74%);
+
 }
 
 *{
@@ -241,10 +244,11 @@ background-color: #d1114e9a;
 
 
 .colorAbout{
-  color: #969696 !important;
+  color: #252525 !important;
 }
 .stateNumbers{
   font-size: 50px;
+
 }
 .backGroung{
   background-color: #191919;
@@ -267,3 +271,60 @@ overflow-x: hidden;
   width:30px;
   margin-top: 10px;
 }
+
+/* .hero{
+  background-color: #36669d;
+background-image: linear-gradient(315deg, #36669d 0%, #d3d3d3 74%);
+
+ }
+.about{
+  background-color: #36669d;
+  background-image: linear-gradient(-115deg, #36669d 0%, #d3d3d3 74%);
+  }
+.gover{
+  background-color: #36669d;
+  background-image: linear-gradient(315deg, #36669d 0%, #d3d3d3 74%);
+  }
+.goals{
+  background-color: #36669d;
+background-image: linear-gradient(-115deg, #36669d 0%, #d3d3d3 74%);
+}
+.articals{
+  background-color: #36669d;
+  background-image: linear-gradient(315deg, #36669d 0%, #d3d3d3 74%);
+  }
+.latest{
+  background-color: #36669d;
+  background-image: linear-gradient(-115deg, #36669d 0%, #d3d3d3 74%);
+  }
+.board{
+  background-color: #36669d;
+  background-image: linear-gradient(315deg, #36669d 0%, #d3d3d3 74%);
+  } */
+ 
+
+  .numAbout{
+    color: #fe8f01 !important;
+  }
+
+  .login{
+    background-color: #36669d;
+    background-image: linear-gradient(315deg, #fe8f01 0%, #36669d 74%);
+  }
+
+  .loginColor{
+    color:white !important;
+  }
+
+  .ylyBlue{
+    color: #1034a8 !important;
+  }
+  .ylyBlueBg{
+    background-color: #1034a8 !important;
+  }
+  .ylyOrange{
+    color: #fe8f01 !important;
+  }
+  .ylyOrangeBg{
+    background-color: #fe8f01 !important;
+  }

@@ -3,9 +3,10 @@ import { Link } from 'react-router-dom'
 import style from './Navbar.module.css'
 import logoYLY from '../../images/YLY 1_White .webp'
 import logoMins from '../../images/Minis White.webp'
+
 const Navbar = () => {
   return <>
-  <nav className={`${style.header} bg-dark navbar navbar-expand-lg z-1`}>
+  <nav className={`${style.header}  navbar navbar-expand-lg z-1`}>
   <div className="container-fluid">
     <Link className={`${style.logo} navbar-brand`} to={'/'}>
       <img className='w-100' src={logoYLY} alt='logo'/>
@@ -17,7 +18,10 @@ const Navbar = () => {
     </button>
 
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className={`${style.newNav}  align-items-center  navbar-nav m-auto mb-2 mb-lg-0 `}>
+      <ul className={`${style.newNav}  align-items-center  navbar-nav m-auto ps-5 mb-2 mb-lg-0 `}>
+        <li className="nav-item">
+          <Link title='tst' className="nav-link " to={'/'}>Home</Link>
+        </li>
         <li className="nav-item">
           <Link title='tst' className="nav-link " to={'about'}>About</Link>
         </li>
@@ -29,9 +33,6 @@ const Navbar = () => {
         </li>
         <li className="nav-item">
           <Link title='tst' className="nav-link " to={'board'}>Board</Link>
-        </li>
-        <li className="nav-item">
-          <Link title='tst' className="nav-link " to={'governments'}>Governments</Link>
         </li>
       </ul>
       
@@ -51,3 +52,5 @@ const Navbar = () => {
 }
 
 export default Navbar
+//fe8f01
+//1034a8

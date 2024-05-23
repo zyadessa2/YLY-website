@@ -1,9 +1,11 @@
 .titleAbout{
     font-size: 50px;
     font-weight: 800;
-    color: #b4b3b3 !important;
+    color: #fe8f01 !important;
 }
-
+.num{
+  color: #fe8f01;
+}
  .info .box {
     background-color: #2d789c;
     padding: 20px;

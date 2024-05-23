@@ -65,8 +65,8 @@ const About = () => {
     )
 
     return (
-        <div className='pt-4 bg-black overflow-x-hidden'>
-        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
+        <div className='pt-4 about overflow-x-hidden'>
+        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4 ylyOrange `} /></motion.h2>
 
         <div className="row container mx-auto mt-5">
             <div className="col-md-8">
@@ -106,24 +106,24 @@ const About = () => {
 
         <div className='container col-md-10 py-4 d-flex  m-auto alighn-items-center justify-content-between xl:text-center md:order-3'>
                     <div className='align-items-center d-flex flex-column items-end justify-center'>
-                        <span className=' inline-block stateNumbers fw-bold text-white  '>
-                            <AnimatedNumbers value={5000 }/>+
+                        <span className=' inline-block stateNumbers fw-bold numAbout  '>
+                            <AnimatedNumbers className='numAbout' value={5000 }/>+
                         </span>
-                        <h2 className='text-center fs-5 colorAbout '>Volunteers</h2>
+                        <h2 className='text-center fs-5 text-white '>Volunteers</h2>
                     </div>
 
                     <div className='align-items-center d-flex flex-column items-end justify-center'>
-                        <span className='inline-block stateNumbers fw-bold text-white '>
-                        <AnimatedNumbers value={200}/>+
+                        <span className='inline-block stateNumbers fw-bold numAbout '>
+                        <AnimatedNumbers className='numAbout' value={200}/>+
                         </span>
-                        <h2 className='text-center fs-5 colorAbout '>Events</h2>
+                        <h2 className='text-center fs-5 text-white '>Events</h2>
                     </div>
 
                     <div className='align-items-center d-flex flex-column items-end justify-center'>
-                        <span className='inline-block stateNumbers fw-bold text-white '>
-                        <AnimatedNumbers value={6}/>+
+                        <span className='inline-block stateNumbers fw-bold numAbout '>
+                        <AnimatedNumbers className='numAbout' value={6}/>+
                         </span>
-                        <h2 className='text-center fs-5 colorAbout  '>Season</h2>
+                        <h2 className='text-center fs-5 text-white  '>Season</h2>
                     </div>
                     
         </div>

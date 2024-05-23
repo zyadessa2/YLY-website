@@ -46,7 +46,7 @@ const OurGoals = () => {
       };
 
   return <>
-  <section class={`${style.goals} bg-dark`} id="goals">
+  <section class={`${style.goals} goals pt-[100px]`} id="goals">
   <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Our Goals" ClassName={`${style.titleAbout} mb-5 text-white`} /></motion.h2>
     {Flag? <>
         <div class={`${style.goalsContainer} container m-auto row d-flex justify-content-between align-items-center`}>

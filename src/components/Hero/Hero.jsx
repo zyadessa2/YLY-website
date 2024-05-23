@@ -4,7 +4,7 @@ import belo from '../../images/character.webp'
 
 const Hero = () => {
   return <>
-  <div class={style.landing} >
+  <div class={`${style.landing} hero`} >
           <div class={`${style.container} container`}>
             
               <div class={`${style.text}`}>

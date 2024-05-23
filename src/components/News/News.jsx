@@ -46,7 +46,7 @@ var settings = {
   };
 
   return <>
-    <div class={style.articles} id="news">
+    <div class={`${style.articles} bg-dark`} id="news">
     <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Articles" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
       {Flag?<>
         <div class={`${style.container} row d-flex justify-content-center g-3 m-auto align-items-center container`}>

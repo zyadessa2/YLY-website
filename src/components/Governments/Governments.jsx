@@ -13,8 +13,8 @@ const Gov = ({name , x , y}) =>{
       cursor-pointer rounded-full 
       fw-bold  text-light 
       py-3 px-6 shadow-dark  
-      py-2-lg px-4-lg text-sm-sm py-2-md px-3-md bg-transparent-xs
-      text-dark-xs  fw-bold-sm'
+        px-3-md bg-transparent-xs
+      text-dark-xs  '
   whileHover={{scale:1.05}}
   initial={{x:0 , y:0}}
   whileInView={{x:x , y:y , transition:{duration:1.5}}}
@@ -58,19 +58,14 @@ const Governments = () => {
 
   return <>
   {/* <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}}  whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Governments" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2> */}
+    <div className="bd-dark">
     <div className=" image m-auto w-75 position-relative mt-5 " id="governments">
       <img  className={style.egyMap} src={egyMap} alt="yly" />
     
       <div className='w-full vh-100 potition-absolute d-flex align-items-center justify-content-center rounded-full 
-      bg-Light h-[80vh]-lg h-[60vh]-sm h-[50vh]-sm 
-      
+      bg-Light  
       '>
-        <motion.div className='d-flex text-dark bg-light align-items-center 
-        justify-content-center cursor-pointer rounded-full fw-bold 
-        bg-dark text-light p-6 shadow-dark p-6-lg p-4-md text-xs-xs p-2-xs'
-        whileHover={{scale:1.05}}
-        >
-        </motion.div>
+        
         {Flag?<>
         <Gov name="Alexandria" x="-6vw" y="-20vw" />
         <Gov name="Aswan" x="10vw" y="10vw" />
@@ -115,6 +110,8 @@ const Governments = () => {
         <Gov name="6th of October" x="1vw" y="-3vw" /> */}
       </div>
     </div>
+    </div>
+    
   
   </>
 }

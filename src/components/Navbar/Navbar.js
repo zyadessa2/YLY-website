@@ -1,11 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import style from './Navbar.module.css'
+import logoYLY from '../../images/YLY 1_White .webp'
+import logoMins from '../../images/Minis White.webp'
 const Navbar = () => {
   return <>
   <nav className={`${style.header} bg-dark navbar navbar-expand-lg z-1`}>
   <div className="container-fluid">
-    <Link className={`${style.logo} navbar-brand`} to={'/'}>YLY</Link>
+    <Link className={`${style.logo} navbar-brand`} to={'/'}>
+      <img className='w-100' src={logoYLY} alt='logo'/>
+      <img className='w-100' src={logoMins} alt='logo'/>
+    </Link>
 
     <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

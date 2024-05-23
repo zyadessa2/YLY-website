@@ -4,7 +4,6 @@ import belo from '../../images/character.webp'
 
 const Hero = () => {
   return <>
-
   <div class={style.landing} >
           <div class={`${style.container} container`}>
             
@@ -22,7 +21,6 @@ const Hero = () => {
               <i class="fas fa-angle-double-down fa-2x"></i>
           </a>
       </div>
-
   </>
 }
 

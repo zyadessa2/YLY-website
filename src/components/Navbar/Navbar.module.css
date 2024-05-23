@@ -52,8 +52,10 @@ color: #426799 !important;
   }
 
   .logo{
-    text-decoration: none;
+    /* text-decoration: none;
     color: #4f80c0 !important;
     font-size: 35px !important;
-    font-weight: bold ;
+    font-weight: bold ; */
+    width: 60px;
+    display: flex;
   }

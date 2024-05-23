@@ -6,7 +6,7 @@ import img from '../../images/minister.webp'
 
 const Board = () => {
   return <>
-      <div class={style.board} id="board">
+      <div class={`${style.board} bg-dark`} id="board">
       <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Board" ClassName={`${style.titleAbout} mb-5 mt-5  text-white`} /></motion.h2>
         <div class={style.container}>
             <div class={`${style.cards} row mt-5 justify-content-center aligin-items-center m-auto`}>

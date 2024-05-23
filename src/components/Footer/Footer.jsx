@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div class={style.footerGallery}>
+        <div class={`${style.footerGallery} `}>
           <img decoding="async"  src={img5} alt="yly" />
           <img decoding="async"  src={img2} alt="yly" />
           <img decoding="async"  src={img3} alt="yly" />

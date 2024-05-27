@@ -75,7 +75,7 @@ function handleFilter(e){
   }
 
   return <>
-        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Articles" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
+        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Hello Admin" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
     <div className="users">
         <div className="container mb-5 mt-5">
             <div className="search text-end">

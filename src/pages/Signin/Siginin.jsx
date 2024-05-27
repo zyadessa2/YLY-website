@@ -74,13 +74,14 @@ const Siginin = () => {
     <head>
         <title>Sign Up</title>
         <meta name='description' content='Sigin in to yly website' />
+        <meta name='name' content='Sigin in to yly website' />
     </head>
     <TransitionEffect/>
     <main>
-    <div className="login bg-dark  ">
-        <div className="row vh-100 justify-content-center align-items-center">
+    <div className="login bg-dark vh-100 ">
+        <div className="row  justify-content-center align-items-center">
           <div className="col-md-7 d-flex flex-column align-items-center justify-content-center">
-          <form onSubmit={handleSubmit} className={`${style.formLogin} d-flex flex-column align-items-center w-75 p-4`} >
+          <form onSubmit={handleSubmit} className={`${style.formLogin} d-flex flex-column align-items-center w-75 mt-5 p-4`} >
           <h3 className='h1 pb-2 text-white'>Sign up</h3>
                     <input type="text" className='mb-1 form-control borderinput' placeholder='الاسم' />
                     <input type="number" className='mb-1 form-control borderinput' placeholder='رقم الواتس' />

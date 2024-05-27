@@ -9,6 +9,8 @@ import OurGoals from './components/ourGoals/OurGoals';
 import News from './components/News/News';
 import Board from './components/Board/Board';
 import Governments from './components/Governments/Governments';
+import { useContext } from 'react';
+import { AuthContext } from './context/AuthContext';
 
 
 let routers = createBrowserRouter([
@@ -26,6 +28,7 @@ let routers = createBrowserRouter([
 ])
 
 function App() {
+  const {currentUser} = useContext(AuthContext)
   return <RouterProvider router={routers}></RouterProvider>
 }
 

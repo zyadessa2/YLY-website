@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import style from './Navbar.module.css'
 import logoYLY from '../../images/YLY 1_White .webp'
 import logoMins from '../../images/Minis White.webp'
+import { AuthContext } from '../../context/AuthContext'
+import { signOut } from 'firebase/auth'
+import { auth } from '../../firebase'
 
 const Navbar = () => {
+  const {currentUser} = useContext(AuthContext)
+  const [flag, setFlag] = useState(false)
+  useEffect(() => {
+    if(currentUser){
+      setFlag(true)
+    }else{
+      setFlag(false)
+    }
+  }, [currentUser])
+  
   return <>
   <nav className={`${style.header}  navbar navbar-expand-lg z-1`}>
   <div className="container-fluid">
@@ -41,8 +54,13 @@ const Navbar = () => {
                 <li className='pe-3'><a className="nav-link " title='tst' href="#"><i className="fa-brands fa-instagram fs-5"></i></a></li>
                 <li className='pe-3'><a className="nav-link " title='tst' href="#"><i className="fa-brands fa-tiktok fs-5"></i></a></li>
                 <li className='pe-3 '><a className="nav-link " title='tst' href="#"><i className="fa-brands fa-linkedin fs-5"></i></a></li>
-                <li className='pe-3 '><Link className="nav-link " to={'login'} title='tst' href="#"><span>login</span></Link></li>
-                <li className='pe-3 '><Link className="nav-link " to={'signup'} title='tst' href="#"><span>sign up</span></Link></li>
+                {flag? <> 
+                  <li className='pe-3 '><Link className="nav-link " to={'login'} title='tst' onClick={()=>signOut(auth)} ><span>log out</span></Link></li>
+                  <li className='pe-3 '><span className="nav-link text-danger fw-bold">Hello {currentUser.displayName}</span></li>
+                </> : <>
+                <li className='pe-3 '><Link className="nav-link " to={'login'} title='tst'><span>login</span></Link></li>
+                <li className='pe-3 '><Link className="nav-link " to={'signup'} title='tst'><span>signup</span></Link></li>
+                </>}
       </ul> 
 
     </div>

@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TransitionEffect from '../../components/TransitionEffect'
 import style from './Login.module.css'
 import img from '../../images/logImg.webp'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { signInWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '../../firebase'
+
 const Login = () => {
+  const [err , setErr] = useState(false)
+  const navigate = useNavigate()
 
   const handleSubmit =async (e)=>{
     e.preventDefault();
-  }
+    const email = e.target[3].value;
+    const password = e.target[4].value;
 
+    try{
+      await signInWithEmailAndPassword(auth , email , password);
+      navigate('/')
+    }catch(err){
+        setErr(true)
+    }
+  }
+  
   return <>
     <head>
         <title>Login In</title>
@@ -26,6 +40,7 @@ const Login = () => {
             <input type="password" className=' mt-1 form-control' placeholder='password' />
             <button className='mt-3 mb-3 btn borderbuttonSignin  ylyBlueBg w-100 text-white '>Sign in</button>
             <span className='text-center forgetpass fs-6 loginColor'>Forget your password?</span>
+            {err && <span>somthing went wrong</span>}
           </form>
           <p className='ps-4 pt-3 pb-1 fs-5 noaccount text-white'>Don't have an account? <Link to='/signup' className='ylyBlue'>Sign up</Link></p>
           </div>

@@ -1,22 +1,28 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import TransitionEffect from '../../components/TransitionEffect'
 import style from './Login.module.css'
 import img from '../../images/logImg.webp'
 import { Link, useNavigate } from 'react-router-dom'
 import { signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../firebase'
+import { AuthContext } from '../../context/AuthContext'
 
 const Login = () => {
   const [err , setErr] = useState(false)
   const navigate = useNavigate()
 
+  const {currentUser , setFlagAdmin } = useContext(AuthContext)
+
   const handleSubmit =async (e)=>{
     e.preventDefault();
-    const email = e.target[3].value;
-    const password = e.target[4].value;
+    const email = e.target[0].value;
+    const password = e.target[1].value;
 
     try{
       await signInWithEmailAndPassword(auth , email , password);
+      if(currentUser.uid == "NPdjSX0D1IP3zO761jVlacEmu0z2"){
+        setFlagAdmin(true)
+      }
       navigate('/')
     }catch(err){
         setErr(true)

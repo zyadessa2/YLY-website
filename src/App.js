@@ -11,6 +11,7 @@ import Board from './components/Board/Board';
 import Governments from './components/Governments/Governments';
 import { useContext } from 'react';
 import { AuthContext } from './context/AuthContext';
+import Users from './components/users/Users';
 
 
 let routers = createBrowserRouter([
@@ -21,6 +22,7 @@ let routers = createBrowserRouter([
     {path:'news',element:<News/>}, 
     {path:'board',element:<Board/>}, 
     {path:'governments',element:<Governments/>}, 
+    {path:'users',element:<Users/>}, 
     {path:'login',element:<Login/>}, 
     {path:'signup',element:<Siginin/>}, 
     // {path:'*',element:<Notfound/>},

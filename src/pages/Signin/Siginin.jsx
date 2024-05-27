@@ -29,40 +29,41 @@ const Siginin = () => {
     const res = await createUserWithEmailAndPassword(auth, email, password)
 
     const storageRef = ref(storage, displayName); 
+    const storageRef2 = ref(storage, displayName+'2'); 
 
     const uploadTask = uploadBytesResumable(storageRef, PersonalPhoto);
-    const uploadID = uploadBytesResumable(storageRef, IDPhoto);
+    const uploadID = uploadBytesResumable(storageRef2, IDPhoto);
 
-uploadTask.on(
-  (error) => {
-    setErr(true)
-  }, 
-  () => {
-    getDownloadURL(uploadID.snapshot.ref).then(async(idURL) => {
-      await setDoc(doc(db , "users" , res.user.uid),{
-        IDURL:idURL,
-      })
-    });
-    getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
-      await updateProfile(res.user,{
-        displayName,
-        photoURL:downloadURL,
-      })
-      await setDoc(doc(db , "users" , res.user.uid),{
-        uid:res.user.uid,
-        displayName,
-        whats,
-        NationalID,
-        email,
-        password,
-        photoURL: downloadURL,
-        // uploadID,
-        code,
-      })
-    });
-  }
-);
-  
+  uploadTask.on(
+    (error) => {
+      setErr(true)
+    }, 
+    () => {
+      getDownloadURL(uploadID.snapshot.ref).then(async(idURL) => {
+        await setDoc(doc(db , "users" , res.user.uid),{
+          IDURL:idURL,
+        })
+      });
+      getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
+        await updateProfile(res.user,{
+          displayName,
+          photoURL:downloadURL,
+        })
+        await setDoc(doc(db , "users" , res.user.uid),{
+          uid:res.user.uid,
+          displayName,
+          whats,
+          NationalID,
+          email,
+          password,
+          photoURL: downloadURL,
+          // uploadID,
+          code,
+        })
+      });
+    }
+  );
+  navigate('/')
     }catch(err){
         setErr(true)
     }

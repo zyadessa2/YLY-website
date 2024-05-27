@@ -6,6 +6,7 @@ export const AuthContext = createContext();
 
 export const AuthContextProvider = ({children})=>{
     const [currentUser , setCurrentUser] = useState({});
+    const [flagAdmin, setFlagAdmin] = useState(false)
 
     useEffect(()=>{
         const unsub = onAuthStateChanged(auth,(user)=>{
@@ -20,7 +21,7 @@ export const AuthContextProvider = ({children})=>{
 
     
     return(
-        <AuthContext.Provider value={{currentUser}} >
+        <AuthContext.Provider value={{currentUser ,flagAdmin ,setFlagAdmin}} >
             {children}
         </AuthContext.Provider>
     )

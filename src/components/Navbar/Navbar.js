@@ -8,7 +8,8 @@ import { signOut } from 'firebase/auth'
 import { auth } from '../../firebase'
 
 const Navbar = () => {
-  const {currentUser} = useContext(AuthContext)
+  const {currentUser , flagAdmin , setFlagAdmin} = useContext(AuthContext)
+
   const [flag, setFlag] = useState(false)
   useEffect(() => {
     if(currentUser){
@@ -18,6 +19,19 @@ const Navbar = () => {
     }
   }, [currentUser])
   
+  // const [flagAdmin, setFlagAdmin] = useState(false)
+  // useEffect(() => {
+  //   if(flag){
+  //     if(currentUser.uid == "NPdjSX0D1IP3zO761jVlacEmu0z2"){
+  //       setFlagAdmin(true)
+  //     }else{
+  //       setFlagAdmin(false)
+  //     }
+  //   }
+  // }, [currentUser])
+  function handleSignOut(){
+    setFlagAdmin(false)
+  }
   return <>
   <nav className={`${style.header}  navbar navbar-expand-lg z-1`}>
   <div className="container-fluid">
@@ -47,6 +61,9 @@ const Navbar = () => {
         <li className="nav-item">
           <Link title='tst' className="nav-link " to={'board'}>Board</Link>
         </li>
+        {flagAdmin && flag ?<li className="nav-item">
+          <Link title='tst' className="nav-link " to={'users'}>Users</Link>
+        </li>:<></>}
       </ul>
       
       <ul className={`${style.social}  align-items-center navbar-nav ms-auto mb-2 mb-lg-0`}>
@@ -55,8 +72,8 @@ const Navbar = () => {
                 <li className='pe-3'><a className="nav-link " title='tst' href="#"><i className="fa-brands fa-tiktok fs-5"></i></a></li>
                 <li className='pe-3 '><a className="nav-link " title='tst' href="#"><i className="fa-brands fa-linkedin fs-5"></i></a></li>
                 {flag? <> 
-                  <li className='pe-3 '><Link className="nav-link " to={'login'} title='tst' onClick={()=>signOut(auth)} ><span>log out</span></Link></li>
-                  <li className='pe-3 '><span className="nav-link text-danger fw-bold">Hello {currentUser.displayName}</span></li>
+                  <li className='pe-3 '><Link className="nav-link " to={'login'} title='tst' onClick={() => { signOut(auth); handleSignOut();}} ><span>log out</span></Link></li>
+                  {/* <li className='pe-3 '><span className="nav-link text-danger fw-bold">Hello {currentUser.displayName}</span></li> */}
                 </> : <>
                 <li className='pe-3 '><Link className="nav-link " to={'login'} title='tst'><span>login</span></Link></li>
                 <li className='pe-3 '><Link className="nav-link " to={'signup'} title='tst'><span>signup</span></Link></li>

@@ -1,0 +1,41 @@
+.titleAbout{
+    font-size: 50px;
+    font-weight: 800;
+    color: #b4b3b3 !important;
+  }
+
+  button{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: #537FE7;
+    color: #fff;
+    border-radius: 20px;
+    transition: .5s;
+}
+button:hover{
+    background-color: #83a2a5;
+    letter-spacing: 1px;
+}
+.btnsearch{
+    display: flex;
+    justify-content: space-between;
+}
+.btnsearch button{
+    width: 45%;
+}
+#deleteall{
+    margin: 20px 0;
+}
+table{
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+table th{
+    text-transform: uppercase;
+}
+th,td{
+    padding: 5px;
+}

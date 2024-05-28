@@ -10,10 +10,16 @@ import { auth } from '../../firebase'
 const Navbar = () => {
   const {currentUser , flagAdmin , setFlagAdmin} = useContext(AuthContext)
 
+
   const [flag, setFlag] = useState(false)
   useEffect(() => {
     if(currentUser){
       setFlag(true)
+      if(currentUser.uid == "GrI0PViLPBRiVPWDVW0KBuUOsDA3"){
+              setFlagAdmin(true)
+            }else{
+                    setFlagAdmin(false)
+                  }
     }else{
       setFlag(false)
     }
@@ -32,6 +38,7 @@ const Navbar = () => {
   function handleSignOut(){
     setFlagAdmin(false)
   }
+  
   return <>
   <nav className={`${style.header}  navbar navbar-expand-lg z-1`}>
   <div className="container-fluid">
@@ -40,8 +47,8 @@ const Navbar = () => {
       <img className='w-100' src={logoMins} alt='logo'/>
     </Link>
 
-    <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
+    <button className="w-fit navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon "></span>
     </button>
 
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -56,14 +63,22 @@ const Navbar = () => {
           <Link title='tst' className="nav-link " to={'ourGoals'}>Our Goals</Link>
         </li>
         <li className="nav-item">
-          <Link title='tst' className="nav-link " to={'news'}>News</Link>
+          <Link title='tst' className="nav-link " to={'allArticals'}>News</Link>
         </li>
         <li className="nav-item">
           <Link title='tst' className="nav-link " to={'board'}>Board</Link>
         </li>
-        {flagAdmin && flag ?<li className="nav-item">
+        {flag && flagAdmin ?<>
+          <li className="nav-item">
           <Link title='tst' className="nav-link " to={'users'}>Users</Link>
-        </li>:<></>}
+        </li>
+          <li className="nav-item">
+          <Link title='tst' className="nav-link " to={'addNews'}>Add News</Link>
+        </li>
+          <li className="nav-item">
+          <Link title='tst' className="nav-link " to={'editEvent'}>Edit Events</Link>
+        </li>
+        </>:<></>}
       </ul>
       
       <ul className={`${style.social}  align-items-center navbar-nav ms-auto mb-2 mb-lg-0`}>
@@ -73,7 +88,7 @@ const Navbar = () => {
                 <li className='pe-3 '><a className="nav-link " title='tst' href="#"><i className="fa-brands fa-linkedin fs-5"></i></a></li>
                 {flag? <> 
                   <li className='pe-3 '><Link className="nav-link " to={'login'} title='tst' onClick={() => { signOut(auth); handleSignOut();}} ><span>log out</span></Link></li>
-                  {/* <li className='pe-3 '><span className="nav-link text-danger fw-bold">Hello {currentUser.displayName}</span></li> */}
+                  <li className='pe-3 '><span className='nav-link text-danger fw-bold bg-slate-100'>Hello {currentUser?.displayName}</span></li>
                 </> : <>
                 <li className='pe-3 '><Link className="nav-link " to={'login'} title='tst'><span>login</span></Link></li>
                 <li className='pe-3 '><Link className="nav-link " to={'signup'} title='tst'><span>signup</span></Link></li>

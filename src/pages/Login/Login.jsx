@@ -20,7 +20,7 @@ const Login = () => {
 
     try{
       await signInWithEmailAndPassword(auth , email , password);
-      if(currentUser.uid == "NPdjSX0D1IP3zO761jVlacEmu0z2"){
+      if(currentUser.uid == "GrI0PViLPBRiVPWDVW0KBuUOsDA3"){
         setFlagAdmin(true)
       }
       navigate('/')

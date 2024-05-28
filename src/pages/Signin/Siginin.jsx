@@ -21,7 +21,7 @@ const Siginin = () => {
     const email = e.target[3].value;
     const password = e.target[4].value;
     const PersonalPhoto= e.target[5].files[0];
-    const IDPhoto = e.target[6].files[1];
+    const IDPhoto = e.target[6].files[0];
     const code = e.target[7].value;
     console.log(code);
 

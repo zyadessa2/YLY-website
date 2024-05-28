@@ -71,6 +71,12 @@
   display: flex;
   gap: 20px;
 }
+@media (max-width:470px) {
+  .thumbnail{
+    display: none;
+  }
+}
+
 .thumbnail .item{
   width: 150px;
   height: 220px;

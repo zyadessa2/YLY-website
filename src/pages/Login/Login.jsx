@@ -22,10 +22,11 @@ const Login = () => {
       await signInWithEmailAndPassword(auth , email , password);
       if(currentUser.uid == "GrI0PViLPBRiVPWDVW0KBuUOsDA3"){
         setFlagAdmin(true)
+        navigate('/')
       }
       navigate('/')
     }catch(err){
-        setErr(true)
+        // setErr(true)
     }
   }
   

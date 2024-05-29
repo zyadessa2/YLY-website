@@ -121,6 +121,7 @@ const AllArticals = () => {
           className={`${style.box} col-md-3 m-4`}
         >
             {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>:<></>}
+            <Link className='text-decoration-none' to={`/articalDetails/${article.id}`}>
           <img src={article.coverImageUrl} alt={article.title} />
           <div className={style.content}>
             <h3>{article.title}</h3>
@@ -130,6 +131,7 @@ const AllArticals = () => {
             <span className='fw-bold text-white'>Write By <span className='text-danger fw-bold'>{article.writerName}</span></span>
             <Link to={`/articalDetails/${article.id}`}>Read more</Link>
           </div>
+          </Link>
         </motion.div>
         ))}
        

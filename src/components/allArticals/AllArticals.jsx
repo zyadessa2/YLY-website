@@ -10,7 +10,7 @@ import { AuthContext } from '../../context/AuthContext'
 
 const AllArticals = () => {
   const [articles, setArticles] = useState([]);
-  const {currentUser} = useContext(AuthContext)
+  const {flagAdmin} = useContext(AuthContext)
 
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
@@ -90,7 +90,7 @@ const AllArticals = () => {
           transition={{ duration: 1.4 }}
           className={`${style.box} col-md-3 m-4`}
         >
-          <button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>
+            {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>:<></>}
           <Link className='text-decoration-none' to={`/articalDetails/${article.id}`}>
           <img src={article.coverImageUrl} alt={article.title} />
           <div className={style.content}>
@@ -98,10 +98,10 @@ const AllArticals = () => {
             <p>{article.briefParagraph}</p>
           </div>
             
-          <div className={`${style.info} d-flex  align-items-center justify-content-between`}>
+          <div className={`${style.info} d-flex align-items-center justify-content-between`}>
             <span className='fw-bold text-white'>Write By <span className='text-danger fw-bold'>{article.writerName}</span></span>
-              <Link to={`/articalDetails/${article.id}`}>Read more</Link>
-            </div>
+            <Link to={`/articalDetails/${article.id}`}>Read more</Link>
+          </div>
           
           </Link>
         </motion.div>
@@ -120,16 +120,16 @@ const AllArticals = () => {
           transition={{ duration: 1.4 }}
           className={`${style.box} col-md-3 m-4`}
         >
-          <button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>
+            {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>:<></>}
           <img src={article.coverImageUrl} alt={article.title} />
           <div className={style.content}>
             <h3>{article.title}</h3>
             <p>{article.briefParagraph}</p>
           </div>
-          <div className={style.info}>
-            <p className='w-100'>Write By {article.writerName}</p>
-              <Link to={`/articalDetails/${article.id}`}>Read more</Link>
-            </div>
+          <div className={`${style.info} d-flex align-items-center justify-content-between`}>
+            <span className='fw-bold text-white'>Write By <span className='text-danger fw-bold'>{article.writerName}</span></span>
+            <Link to={`/articalDetails/${article.id}`}>Read more</Link>
+          </div>
         </motion.div>
         ))}
        

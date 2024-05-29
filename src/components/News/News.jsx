@@ -11,8 +11,7 @@ import { AuthContext } from '../../context/AuthContext'
 
 const News = () => {
   const [articles, setArticles] = useState([]);
-  const {currentUser} = useContext(AuthContext)
-
+  const { flagAdmin } = useContext(AuthContext)
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight
@@ -60,6 +59,7 @@ const News = () => {
           setArticles(articlesList);
         };
         fetchArticles();
+        
       }, []);
 
       const handleDelete = async (id) => {
@@ -95,7 +95,7 @@ const News = () => {
                   transition={{ duration: 1.4 }}
                   className={`${style.box} col-md-3 m-4`}
                 >
-                  <button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>
+                    {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>:<></>}
                   <Link className='text-decoration-none' to={`/articalDetails/${article.id}`}>
                     <img src={article.coverImageUrl} alt={article.title} />
                     <div className={style.content}>
@@ -127,7 +127,7 @@ const News = () => {
                     transition={{ duration: 1.4 }}
                     className={`${style.box} col-md-3 m-4`}
                   >
-                    <button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>
+                    {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>:<></>}
                     <Link className='text-decoration-none' to={`/articalDetails/${article.id}`}>
                     <img src={article.coverImageUrl} alt={article.title} />
                     <div className={style.content}>

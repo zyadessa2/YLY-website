@@ -65,7 +65,7 @@ const Siginin = () => {
   );
   navigate('/')
     }catch(err){
-        setErr(true)
+        // setErr(true)
     }
   }
 

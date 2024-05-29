@@ -53,8 +53,13 @@ const [userData, setUserData] = useState([]);
         sortable:true,
     },
     {
-        name:"photoURL",
+        name:"photo",
         selector:row => row.photoURL,
+        sortable:true,
+    },
+    {
+        name:"IDPhoto",
+        selector:row => row.IDPhotoURL,
         sortable:true,
     },
   ]

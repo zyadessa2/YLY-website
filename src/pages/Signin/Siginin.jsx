@@ -28,22 +28,39 @@ const Siginin = () => {
     try{
     const res = await createUserWithEmailAndPassword(auth, email, password)
 
+    const uploadImage = async (image, refPath) => {
+      if (image) {
+        const imageRef = ref(storage, refPath);
+        const uploadTask = uploadBytesResumable(imageRef, image);
+        await new Promise((resolve, reject) => {
+          uploadTask.on(
+            "state_changed",
+            null,
+            (error) => reject(error),
+            () => resolve()
+          );
+        });
+        return await getDownloadURL(imageRef);
+      }
+      return null;
+    };
+
     const storageRef = ref(storage, displayName); 
-    const storageRef2 = ref(storage, displayName+'2'); 
+    const IDPhotoURL = await uploadImage(IDPhoto, `coverImages/${displayName}`);
 
     const uploadTask = uploadBytesResumable(storageRef, PersonalPhoto);
-    const uploadID = uploadBytesResumable(storageRef2, IDPhoto);
+    // const uploadID = uploadBytesResumable(storageRef2, IDPhoto);
 
   uploadTask.on(
     (error) => {
       setErr(true)
     }, 
     () => {
-      getDownloadURL(uploadID.snapshot.ref).then(async(idURL) => {
-        await setDoc(doc(db , "users" , res.user.uid),{
-          IDURL:idURL,
-        })
-      });
+      // getDownloadURL(uploadID.snapshot.ref).then(async(idURL) => {
+      //   await setDoc(doc(db , "users" , res.user.uid),{
+      //     IDURL:idURL,
+      //   })
+      // });
       getDownloadURL(uploadTask.snapshot.ref).then(async(downloadURL) => {
         await updateProfile(res.user,{
           displayName,
@@ -57,12 +74,13 @@ const Siginin = () => {
           email,
           password,
           photoURL: downloadURL,
-          // uploadID,
+          IDPhotoURL,
           code,
         })
       });
     }
   );
+  window.location.reload()
   navigate('/')
     }catch(err){
         // setErr(true)

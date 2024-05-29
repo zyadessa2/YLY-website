@@ -75,7 +75,8 @@ const AllArticals = () => {
       }
 
       if (!articles) return <div>Loading...</div>;
-
+      ;
+      
       return <>
       <div class={`${style.articles} articals`} id="news">
       <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="Articles" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>

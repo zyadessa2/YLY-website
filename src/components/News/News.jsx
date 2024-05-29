@@ -11,7 +11,7 @@ import { AuthContext } from '../../context/AuthContext'
 
 const News = () => {
   const [articles, setArticles] = useState([]);
-  const { flagAdmin } = useContext(AuthContext)
+  const { flagAdmin  } = useContext(AuthContext)
     const [windowSize, setWindowSize] = useState({
         width: window.innerWidth,
         height: window.innerHeight
@@ -59,7 +59,6 @@ const News = () => {
           setArticles(articlesList);
         };
         fetchArticles();
-        
       }, []);
 
       const handleDelete = async (id) => {
@@ -75,7 +74,10 @@ const News = () => {
           });
       }
 
+
+  
       if (!articles) return <div>Loading...</div>;
+      
       const displayedArticles = articles.slice(0, 3);
 
       return  <>

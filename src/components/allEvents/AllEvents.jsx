@@ -131,8 +131,8 @@ const AllEvents = () => {
             className={`${style.box} col-md-3 m-4`}
           >
               {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(event.id)}>Delete</button>:<></>}
-              <Link className='text-decoration-none' to={`/articalDetails/${event.id}`}>
-            <img src={event.coverImageUrl} alt={event.title} />
+              <Link className='text-decoration-none' to={`/eventDetails/${event.id}`}>
+            <img src={event?.eventCoverUrl} alt={event.title} />
             <div className={style.content}>
               <h3>{event.title}</h3>
               <p>{event.briefParagraph}</p>

@@ -184,15 +184,15 @@ function handleFilter(e){
                               <span className='text-light'>Seconds</span>
                               </motion.div>
                           </div>
-                          <h2 className={style.title}>{event.title}</h2>
+                          <h2 className={style.title}>{event?.title}</h2>
                           <p className={style.description}>
-                            {event.eventDetails}
+                            {event?.eventDetails}
                           </p>
                       </div>
                   </div>
   
                   <div className="col-md-4">
-                  {event.eventCoverUrl && <img className='rounded' src={event.eventCoverUrl} alt={event.title} />}
+                  { <img className='rounded' src={event?.eventCoverUrl} alt={event?.title} />}
                   </div>
               </div>
   

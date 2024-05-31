@@ -18,22 +18,22 @@ const Footer = () => {
           <h3>YLY</h3>
           <ul class={style.social}>
             <li>
-              <a href="#" class={style.facebook}>
+              <a href="https://www.facebook.com/Ylyministryy" class={style.facebook}>
                 <i class="fab fa-facebook-f"></i>
               </a>
             </li>
             <li>
-              <a href="#" class={style.instagram}>
+              <a href="https://www.instagram.com/ylyministry/" class={style.instagram}>
                 <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
             <li>
-              <a href="#" class={style.tiktok}>
+              <a href="https://www.tiktok.com/@ylyministry?is_from_webapp=1&sender_device=pc" class={style.tiktok}>
                 <i class="fa-brands fa-tiktok"></i>
               </a>
             </li>
             <li>
-              <a href="#" class={style.linkedIn}>
+              <a href="https://www.linkedin.com/company/ylyministry/" class={style.linkedIn}>
                 <i class="fa-brands fa-linkedin fs-5"></i>
               </a>
             </li>
@@ -58,7 +58,7 @@ const Footer = () => {
           </div> */}
           <div class={style.line}>
             <i class="fa-solid fa-envelope"></i>
-            <div class={style.info}>yly@gmail.com</div>
+            <div class={style.info}>Yly.ministryofyouthandsports@gmail.com</div>
           </div>
           <div class={style.line}>
             <i class="fas fa-phone-volume fa-fw"></i>

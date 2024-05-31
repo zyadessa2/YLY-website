@@ -14,6 +14,10 @@ const EditEvent = ({ eventId, setEvents }) => {
         const eventBriefParagraph = e.target[2].value;
         const date = e.target[3].value;
         console.log(title, eventImage, eventBriefParagraph, date);
+        if (!eventImage || !title || !eventBriefParagraph || !date) {
+          alert("Please fill out all fields and provide an image.");
+          return;
+      }
         try {
           const uploadImage = async (image, refPath) => {
             if (image) {

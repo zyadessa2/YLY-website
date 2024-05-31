@@ -25,6 +25,10 @@ const AddArticals = () => {
         const imagePar3 = e.target[8].files.length > 0 ? e.target[8].files[0] : null;
         const par4 = e.target[9].value;
         const imagePar4 = e.target[10].files.length > 0 ? e.target[10].files[0] : null;
+        const par5 = e.target[9].value;
+        const imagePar5 = e.target[10].files.length > 0 ? e.target[10].files[0] : null;
+        const par6 = e.target[9].value;
+        const imagePar6 = e.target[10].files.length > 0 ? e.target[10].files[0] : null;
 
         try {
           const uploadImage = async (image, refPath) => {
@@ -49,6 +53,8 @@ const AddArticals = () => {
           const imagePar2Url = await uploadImage(imagePar2, `par2Images/${title}2`);
           const imagePar3Url = await uploadImage(imagePar3, `par3Images/${title}3`);
           const imagePar4Url = await uploadImage(imagePar4, `par4Images/${title}4`);
+          const imagePar5Url = await uploadImage(imagePar5, `par4Images/${title}5`);
+          const imagePar6Url = await uploadImage(imagePar6, `par4Images/${title}6`);
       
           const articleData = {
             writerName:currentUser.displayName,
@@ -60,7 +66,9 @@ const AddArticals = () => {
               { text: par1, image: imagePar1Url },
               { text: par2, image: imagePar2Url },
               { text: par3, image: imagePar3Url },
-              { text: par4, image: imagePar4Url }
+              { text: par4, image: imagePar4Url },
+              { text: par5, image: imagePar5Url },
+              { text: par6, image: imagePar6Url },
             ]
           };
       
@@ -113,6 +121,16 @@ const AddArticals = () => {
                     <input type="text" className='mb-1 form-control borderinput' placeholder='رابع فقره' />
                     <div class="input-group mt-3 mb-3">
                       <label class="input-group-text" for="file1">صوره رابع فقره</label>
+                      <input type="file" class="form-control" id="file1" />
+                    </div>
+                    <input type="text" className='mb-1 form-control borderinput' placeholder='خامس فقره' />
+                    <div class="input-group mt-3 mb-3">
+                      <label class="input-group-text" for="file1">صوره خامس فقره</label>
+                      <input type="file" class="form-control" id="file1" />
+                    </div>
+                    <input type="text" className='mb-1 form-control borderinput' placeholder='سادس فقره' />
+                    <div class="input-group mt-3 mb-3">
+                      <label class="input-group-text" for="file1">صوره سادس فقره</label>
                       <input type="file" class="form-control" id="file1" />
                     </div>
                     <button className='mt-3 mb-3 btn ylyBlueBg btn-primary w-100 text-white '>اضافه</button>

@@ -76,7 +76,21 @@ const News = () => {
 
 
   
-      if (!articles) return <div>Loading...</div>;
+      if (!articles) return <>
+      <div id="lauding">
+        <div class="sk-cube-grid ">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+          </div>
+    </div>
+      </>
       
       const displayedArticles = articles.slice(0, 3);
 
@@ -91,10 +105,10 @@ const News = () => {
               {displayedArticles.map(article => (
                 <motion.div
                   key={article.id}
-                  viewport={{ once: true }}
-                  initial={{ x: -50, opacity: 0 }}
-                  whileInView={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 1.4 }}
+                  // viewport={{ once: true }}
+                  // initial={{ x: -50, opacity: 0 }}
+                  // whileInView={{ x: 0, opacity: 1 }}
+                  // transition={{ duration: 1.4 }}
                   className={`${style.box} col-md-3 m-4`}
                 >
                     {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>:<></>}
@@ -123,10 +137,10 @@ const News = () => {
                 {displayedArticles.map(article => (
                   <motion.div
                     key={article.id}
-                    viewport={{ once: true }}
-                    initial={{ x: -50, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
-                    transition={{ duration: 1.4 }}
+                    // viewport={{ once: true }}
+                    // initial={{ x: -50, opacity: 0 }}
+                    // whileInView={{ x: 0, opacity: 1 }}
+                    // transition={{ duration: 1.4 }}
                     className={`${style.box} col-md-3 m-4`}
                   >
                     {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>:<></>}

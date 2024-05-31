@@ -16,6 +16,9 @@ import AllArticals from './components/allArticals/AllArticals';
 import ArticalDetails from './components/articalDetails/ArticalDetails';
 import AddArticals from './components/addArticals/AddArticals';
 import EditEvent from './components/editEvent/EditEvent';
+import AddEvents from './components/addEvents/AddEvents';
+import AllEvents from './components/allEvents/AllEvents';
+import EventDetails from './components/eventDetails/EventDetails';
 
 
 let routers = createBrowserRouter([
@@ -31,6 +34,9 @@ let routers = createBrowserRouter([
     {path:'allArticals',element:<AllArticals/>}, 
     {path:'/articalDetails/:id',element:<ArticalDetails/>}, 
     {path:'editEvent',element:<EditEvent/>}, 
+    {path:'addEvents',element:<AddEvents/>}, 
+    {path:'allEvents',element:<AllEvents/>},
+    {path:'/eventDetails/:id',element:<EventDetails/>},  
     {path:'login',element:<Login/>}, 
     {path:'signup',element:<Siginin/>}, 
     // {path:'*',element:<Notfound/>},

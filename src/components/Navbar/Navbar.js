@@ -68,24 +68,35 @@ const Navbar = () => {
         <li className="nav-item">
           <Link title='tst' className="nav-link " to={'board'}>Board</Link>
         </li>
+        <li className="nav-item">
+          <Link title='tst' className="nav-link " to={'allEvents'}>Events</Link>
+        </li>
         {flag && flagAdmin ?<>
-          <li className="nav-item">
-          <Link title='tst' className="nav-link " to={'users'}>Users</Link>
-        </li>
-          <li className="nav-item">
-          <Link title='tst' className="nav-link " to={'addNews'}>Add News</Link>
-        </li>
-          <li className="nav-item">
-          <Link title='tst' className="nav-link " to={'editEvent'}>Edit Events</Link>
-        </li>
+          <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+
+            <ul class="dropdown-menu">
+              <li className="nav-item">
+                <Link title='tst' className="nav-link " to={'users'}>Users</Link>
+              </li>
+              <li className="nav-item">
+                <Link title='tst' className="nav-link " to={'addNews'}>Add News</Link>
+              </li>
+              <li className="nav-item">
+                <Link title='tst' className="nav-link " to={'addEvents'}>Add Events</Link>
+              </li>
+            </ul>
+          </div>
         </>:<></>}
       </ul>
       
       <ul className={`${style.social}  align-items-center navbar-nav ms-auto mb-2 mb-lg-0`}>
-                <li className='pe-3'><a className="nav-link " title='tst' href="#"><i className="fab fa-facebook-f fs-5"></i></a></li>
-                <li className='pe-3'><a className="nav-link " title='tst' href="#"><i className="fa-brands fa-instagram fs-5"></i></a></li>
-                <li className='pe-3'><a className="nav-link " title='tst' href="#"><i className="fa-brands fa-tiktok fs-5"></i></a></li>
-                <li className='pe-3 '><a className="nav-link " title='tst' href="#"><i className="fa-brands fa-linkedin fs-5"></i></a></li>
+                <li className='pe-3'><a className="nav-link " title='tst' href="https://www.facebook.com/Ylyministryy"><i className="fab fa-facebook-f fs-5"></i></a></li>
+                <li className='pe-3'><a className="nav-link " title='tst' href="https://www.instagram.com/ylyministry/"><i className="fa-brands fa-instagram fs-5"></i></a></li>
+                <li className='pe-3'><a className="nav-link " title='tst' href="https://www.tiktok.com/@ylyministry?is_from_webapp=1&sender_device=pc"><i className="fa-brands fa-tiktok fs-5"></i></a></li>
+                <li className='pe-3 '><a className="nav-link " title='tst' href="https://www.linkedin.com/company/ylyministry/"><i className="fa-brands fa-linkedin fs-5"></i></a></li>
                 {flag? <> 
                   <li className='pe-3 '><Link className="nav-link " to={'login'} title='tst' onClick={() => { signOut(auth); handleSignOut();}} ><span>log out</span></Link></li>
                   <li className='pe-3 '><span className='nav-link text-danger fw-bold bg-slate-100'>Hello {currentUser?.displayName}</span></li>

@@ -144,7 +144,6 @@ const AllEvents = () => {
             </Link>
           </motion.div>
           ))}
-         
           </Slider>
           </div>
           </>

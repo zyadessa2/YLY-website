@@ -78,9 +78,9 @@ useEffect(() => {
         event_image_url: event.eventCoverUrl
       };
 
-      emailjs.send('service_cuu6ace', 'template_b3om33t', templateParams, 'LVQRqjbA-v8p1iAJ_')
+      emailjs.send('service_cuu6ace', 'template_b3om33t', templateParams, 'gz7EEVxglt2QwpzHG')
         .then((response) => {
-          console.log('SUCCESS!', response.status, response.text);
+          console.log('SUCCESS!', response.status, response);
           alert('تم التسجيل');
         }, (error) => {
           console.error('FAILED...', error);
@@ -107,8 +107,6 @@ useEffect(() => {
     }
   };
   
-
-
   const columns =[
     {
         name:"Name",
@@ -128,13 +126,10 @@ useEffect(() => {
 
   ]
 
-
-
   const [rec, setRec] = useState(registrations)
   useEffect(() => {
     setRec(registrations);
   }, [registrations]);
-console.log(rec);
 
 function handleFilter(e){
     const newData = registrations.filter(row =>{
@@ -200,7 +195,7 @@ function handleFilter(e){
                 <form className="d-flex flex-col" onSubmit={sendEmail}>
                   <input type="text" placeholder="Enter Your Name" value={toName} onChange={(e) => setToName(e.target.value)} required />
                   <input  type="tel" placeholder="Your Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required />
-                  <input type="email" placeholder="Enter Your Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+                  <input type="email" placeholder="Enter Your Email" value={email} onChange={(e) => setEmail(e.target.value)}  required />
                   <input type="submit" value="Subscribe" />
                 </form>
               </motion.div>

@@ -72,7 +72,7 @@ const Navbar = () => {
           <Link title='tst' className="nav-link " to={'allEvents'}>Events</Link>
         </li>
         {flag && flagAdmin ?<>
-          <div class="dropdown">
+          <div class="dropdown ">
             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown link
             </a>

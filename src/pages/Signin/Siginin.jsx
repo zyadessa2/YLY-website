@@ -11,8 +11,6 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const Siginin = () => {
-  // const [err , setErr] = useState(false)
-  // const navigate = useNavigate()
 
   // const handleSubmit =async (e)=>{
   //   e.preventDefault();
@@ -197,13 +195,12 @@ const Siginin = () => {
         .matches(/^01[0-9]{9}$/, 'رقم الهاتف غير صالح، يجب ادخال رقم مصرى')
         .required('رقم الواتس مطلوب'),
       nationalId: Yup.string()
-        .matches(/^[0-9]{14}$/, 'الرقم القومي يجب أن يكون مكون من 14 رقم')
-        .required('الرقم القومي مطلوب'),
+        .matches(/^[0-9]{14}$/, 'الرقم القومي يجب أن يكون مكون من 14 رقم'),
       email: Yup.string().email('البريد الإلكتروني غير صالح').required('البريد الإلكتروني مطلوب'),
       password: Yup.string().required('كلمة المرور مطلوبة'),
-      profileImage: Yup.mixed().required('صورة شخصية مطلوبة'),
-      idImage: Yup.mixed().required('صورة البطاقة مطلوبة'),
-      code: Yup.string().required('الكود مطلوب'),
+      profileImage: Yup.mixed(),
+      idImage: Yup.mixed(),
+      code: Yup.string(),
     }),
     onSubmit: handleSubmit,
   });

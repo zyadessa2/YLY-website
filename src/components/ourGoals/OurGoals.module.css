@@ -28,7 +28,7 @@ span {
   background: var(--bg-color);
   padding: 20px ;
   border-radius: 2rem;
-  box-shadow: 0 .1rem .5rem rgb(19, 75, 139);
+  box-shadow: 0 .1rem .5rem rgb(14, 57, 105);
   text-align: center;
   border-top: .6rem solid var(--main-color);
   border-bottom: .6rem solid var(--main-color);

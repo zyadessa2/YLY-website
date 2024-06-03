@@ -73,8 +73,8 @@ const Navbar = () => {
         </li>
         {flag && flagAdmin ?<>
           <div class="dropdown ">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
+            <a class="btn btn-primary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              User Access
             </a>
 
             <ul class="dropdown-menu">

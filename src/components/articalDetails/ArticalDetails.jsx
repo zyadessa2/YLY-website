@@ -70,7 +70,7 @@ const ArticalDetails = () => {
             <div className="imageCover d-flex flex-col justify-center align-items-center">
               <img className='rounded' src={article.coverImageUrl} alt={article.title} />
             </div>
-            <div className="writer">
+            <div className="writer text-light">
               <h2>{article.title}</h2>
               <h5 className='h3'>كتب/ {article.writerName}</h5>
             </div>

@@ -92,14 +92,38 @@ const News = () => {
     </div>
       </>
       
-      const displayedArticles = articles.slice(0, 3);
+      const displayedArticles = articles.slice(0, 5);
 
       return  <>
       <div className={`${style.articles} articals`} id="news">
         <motion.h2 viewport={{ once: true }} initial={{ scale: 0.5, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{ duration: 1.4 }}>
           <AnimatedText text="Articles" ClassName={`${style.titleAbout} mb-4 mt-4 text-white`} />
         </motion.h2>
-        {Flag ? (
+        <div className={`${style.container}   m-auto row d-flex flex-col justify-content-between align-items-center`}>
+              <Slider {...settings} className={style.sliderNews}>
+                {displayedArticles.map(article => (
+                  <motion.div
+                    key={article.id}
+                    className={`${style.box} col-md-3 m-4`}
+                  >
+                    {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>:<></>}
+                    <Link className='text-decoration-none' to={`/articalDetails/${article.id}`}>
+                    <img src={article.coverImageUrl} alt={article.title} />
+                    <div className={style.content}>
+                      <h3>{article.title}</h3>
+                    </div>
+                    <div className={`${style.info} d-flex align-items-center justify-content-between`}>
+                      <Link to={`/articalDetails/${article.id}`}>Read more</Link>
+                    </div>
+                    </Link>
+                  </motion.div>
+                ))}
+              </Slider>
+              <button className='btn btn-primary w-50 mt-5'>
+                <Link className='text-white text-decoration-none' to={'allArticals'}>Read More</Link>
+              </button>
+            </div>
+        {/* {Flag ? (
           <>
             <div className={`${style.container} row d-flex justify-content-center g-3 m-auto align-items-center container`}>
               {displayedArticles.map(article => (
@@ -164,7 +188,7 @@ const News = () => {
             </div>
             
           </>
-        )}
+        )} */}
       </div>
     </>
 }

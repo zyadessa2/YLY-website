@@ -66,7 +66,7 @@ const About = () => {
 
     return (
         <div className='pt-4 about overflow-x-hidden'>
-        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4 ylyOrange `} /></motion.h2>
+        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4  `} /></motion.h2>
 
         <div className="row container mx-auto mt-5">
             <div className="col-md-8">

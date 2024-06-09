@@ -200,7 +200,7 @@ className='z-30 login rounded-lg backdrop-blur-md py-[70px] min-w-[70vw] flex fl
   : null
 }
 
-<Link to='/' className='w-[160px] md:w-[120px] absolute left-[50%] top-1 md:translate-x-[150%] translate-x-[-50%]'>
+<Link to='/' className='w-[160px] md:w-[120px] absolute left-[50%] top-1  translate-x-[-50%]'>
 <img className='w-100' src={logoYLY}/>
 </Link>
 </header>

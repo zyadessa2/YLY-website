@@ -104,10 +104,11 @@ className='w-full flex justify-between items-center lg:hidden'>
   <nav className='flex justify-center align-center'>
     <CustomLink to='/'  title="Home"  className='mr-3 text-decoration-none text-light'/>
     <CustomLink to="/about" title="About Us" className='mx-3 text-decoration-none text-light'/>
-    <CustomLink to="/ourGoals" title="Our Goals" className='mx-3 text-decoration-none text-light'/>
+    {/* <CustomLink to="/ourGoals" title="Our Goals" className='mx-3 text-decoration-none text-light'/> */}
     <CustomLink to="/allArticals" title="News" className='mx-3 text-decoration-none text-light'/>
     <CustomLink to="/allEvents" title="Events" className='mx-3 text-decoration-none text-light'/>
-    <CustomLink to="/board" title="Board" className='mx-3 text-decoration-none text-light'/>
+    {/* <CustomLink to="/board" title="Board" className='mx-3 text-decoration-none text-light'/> */}
+    <CustomLink to="/theMinistry" title="The Ministry" className='mx-3 text-decoration-none text-light'/>
     {flag && flagAdmin ?<>
       <div class="dropdown-center">
         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -162,10 +163,11 @@ className='z-30 login rounded-lg backdrop-blur-md py-[70px] min-w-[70vw] flex fl
   <nav className='flex items-center flex-col justify-center'>
     <CustomMobileLink to='/'  title="Home"  className='' toggle={handelClick}/>
     <CustomMobileLink to="/about" title="About Us" className='' toggle={handelClick}/>
-    <CustomMobileLink to="/ourGoals" title="Our Goals" className='' toggle={handelClick}/>
+    {/* <CustomMobileLink to="/ourGoals" title="Our Goals" className='' toggle={handelClick}/> */}
     <CustomMobileLink to="/allArticals" title="News" className='' toggle={handelClick}/>
     <CustomMobileLink to="/allEvents" title="Events" className='' toggle={handelClick}/>
-    <CustomMobileLink to="/board" title="Board" className='' toggle={handelClick}/>
+    {/* <CustomMobileLink to="/board" title="Board" className='' toggle={handelClick}/> */}
+    <CustomLink to="/theMinistry" title="The Ministry" className='mx-3 text-decoration-none text-light' toggle={handelClick}/>
   </nav>
   
   <nav className='flex items-center justify-center flex-wrap mt-4'>

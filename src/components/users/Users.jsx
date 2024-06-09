@@ -74,8 +74,11 @@ console.log(rec);
 
 function handleFilter(e){
     const newData = userData.filter(row =>{
-        return row.displayName.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase()) 
-    })
+      if (row.displayName && typeof row.displayName === 'string') {
+        return row.displayName.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase());
+      }
+      return false;
+    });
     setRec(newData)
   }
 

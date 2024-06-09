@@ -19,6 +19,7 @@ import EditEvent from './components/editEvent/EditEvent';
 import AddEvents from './components/addEvents/AddEvents';
 import AllEvents from './components/allEvents/AllEvents';
 import EventDetails from './components/eventDetails/EventDetails';
+import TheMinistry from './components/theMinistry/TheMinistry';
 
 
 let routers = createBrowserRouter([
@@ -37,6 +38,7 @@ let routers = createBrowserRouter([
     {path:'addEvents',element:<AddEvents/>}, 
     {path:'allEvents',element:<AllEvents/>},
     {path:'/eventDetails/:id',element:<EventDetails/>},  
+    {path:'theMinistry',element:<TheMinistry/>}, 
     {path:'login',element:<Login/>}, 
     {path:'signup',element:<Siginin/>}, 
     // {path:'*',element:<Notfound/>},

@@ -97,30 +97,140 @@ const News = () => {
       return  <>
       <div className={`${style.articles} articals`} id="news">
         <motion.h2 viewport={{ once: true }} initial={{ scale: 0.5, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} transition={{ duration: 1.4 }}>
-          <AnimatedText text="Articles" ClassName={`${style.titleAbout} mb-4 mt-4 text-white`} />
+          <AnimatedText text="Articles" ClassName={`${style.titleAbout} mb-4 mt-4 text-dark`} />
         </motion.h2>
-        <div className={`${style.container}   m-auto row d-flex flex-col justify-content-between align-items-center`}>
-              <Slider {...settings} className={style.sliderNews}>
+        {/* <div class="articles" id="articles">
+      <h2 class="main-title">Articles</h2>
+      <div class="container">
+        <div class="box">
+          <img src="images/cat-01.jpg" alt=""/>
+          <div class="content">
+            <h3>text title</h3>
+            <p>Lorem ipsum dolor, sit amet cipisicing elit. Maxime sapiente repudiandae incidunt cupiditate</p>
+          </div>
+          <div class="info">
+            <a href="#">Read more</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/cat-02.jpg" alt=""/>
+          <div class="content">
+            <h3>text title</h3>
+            <p>Lorem ipsum dolor, sit amet cipisicing elit. Maxime sapiente repudiandae incidunt cupiditate</p>
+          </div>
+          <div class="info">
+            <a href="#">Read more</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/cat-03.jpg" alt=""/>
+          <div class="content">
+            <h3>text title</h3>
+            <p>Lorem ipsum dolor, sit amet cipisicing elit. Maxime sapiente repudiandae incidunt cupiditate</p>
+          </div>
+          <div class="info">
+            <a href="#">Read more</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/cat-04.jpg" alt=""/>
+          <div class="content">
+            <h3>text title</h3>
+            <p>Lorem ipsum dolor, sit amet cipisicing elit. Maxime sapiente repudiandae incidunt cupiditate</p>
+          </div>
+          <div class="info">
+            <a href="#">Read more</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/cat-01.jpg" alt=""/>
+          <div class="content">
+            <h3>text title</h3>
+            <p>Lorem ipsum dolor, sit amet cipisicing elit. Maxime sapiente repudiandae incidunt cupiditate</p>
+          </div>
+          <div class="info">
+            <a href="#">Read more</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/cat-02.jpg" alt=""/>
+          <div class="content">
+            <h3>text title</h3>
+            <p>Lorem ipsum dolor, sit amet cipisicing elit. Maxime sapiente repudiandae incidunt cupiditate</p>
+          </div>
+          <div class="info">
+            <a href="#">Read more</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/cat-03.jpg" alt=""/>
+          <div class="content">
+            <h3>text title</h3>
+            <p>Lorem ipsum dolor, sit amet cipisicing elit. Maxime sapiente repudiandae incidunt cupiditate</p>
+          </div>
+          <div class="info">
+            <a href="#">Read more</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/cat-04.jpg" alt=""/>
+          <div class="content">
+            <h3>text title</h3>
+            <p>Lorem ipsum dolor, sit amet cipisicing elit. Maxime sapiente repudiandae incidunt cupiditate</p>
+          </div>
+          <div class="info">
+            <a href="#">Read more</a>
+            <i class="fas fa-long-arrow-alt-right"></i>
+          </div>
+        </div>
+      </div>
+    </div> */}
+        <div className={`${style.container}   m-auto row justify-content-center align-items-center`}>
                 {displayedArticles.map(article => (
                   <motion.div
                     key={article.id}
-                    className={`${style.box} col-md-3 m-4`}
+                    className={`${style.box} col-md-3 m-3`}
                   >
                     {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(article.id)}>Delete</button>:<></>}
                     <Link className='text-decoration-none' to={`/articalDetails/${article.id}`}>
-                    <img src={article.coverImageUrl} alt={article.title} />
-                    <div className={style.content}>
-                      <h3>{article.title}</h3>
-                    </div>
-                    <div className={`${style.info} d-flex align-items-center justify-content-between`}>
-                      <Link to={`/articalDetails/${article.id}`}>Read more</Link>
-                    </div>
+                    {/* <div class={style.box}>
+                      <img src={article.coverImageUrl} alt=""/>
+                      <div class={style.content}>
+                        <h3>text title</h3>
+                        <p>Lorem ipsum dolor, sit amet cipisicing elit. Maxime sapiente repudiandae incidunt cupiditate</p>
+                      </div>
+                      <div class={style.info}>
+                        <a href="#">Read more</a>
+                        <i class="fas fa-long-arrow-alt-right"></i>
+                      </div>
+                    </div> */}
+                      <div class="w-80 p-4 bg-white rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                        <img class="w-full h-40 object-cover rounded-t-lg" alt="Card Image" src={article.coverImageUrl}/>
+                        <div class="p-4">
+                            <h2 class="text-xl  font-semibold">Beautiful Card</h2>
+                            <p class="text-gray-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis ante sit amet tellus ornare tincidunt.</p>
+                            <div class="flex justify-between items-center mt-4">
+                                <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400">Read More</button>
+                            </div>
+                        </div>
+                      </div>
                     </Link>
                   </motion.div>
                 ))}
-              </Slider>
-              <button className='btn btn-primary w-50 mt-5'>
-                <Link className='text-white text-decoration-none' to={'allArticals'}>Read More</Link>
+              <button className=' w-100 mt-5'>
+                {/* <Link className='btn btn-primary w-25 text-white text-decoration-none' to={'allArticals'}>Read More</Link> */}
+                <Link><button
+  class="relative py-3 px-12 text-black text-base font-bold nded-full overflow-hidden bg-light rounded-full transition-all duration-400 ease-in-out shadow-md hover:scale-105 hover:text-white hover:shadow-lg active:scale-90 before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-blue-500 before:to-blue-300 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-full hover:before:left-0" to={'allArticals'}>
+  ALL Articals!
+</button>
+</Link>
               </button>
             </div>
         {/* {Flag ? (

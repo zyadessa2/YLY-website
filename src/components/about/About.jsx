@@ -18,11 +18,11 @@ const Details = ({type , time , place , info }) =>{
         whileInView={{y:0}}
         transition={{duration:0.5 , type:"spring"}}
         >
-            <h3 className='capitalize font-bold text-2xl text-light sm:text-xl xs:text-lg'>{type}</h3>
-            <span className='capitalize font-medium text-light/75 xs:text-sm'>
+            <h3 className='capitalize font-bold text-2xl text-dark sm:text-xl xs:text-lg'>{type}</h3>
+            <span className='capitalize font-medium text-dark/75 xs:text-sm'>
                 {time} | {place}
             </span >
-            <p className='font-medium w-full text-light/50 md:text-sm'>
+            <p className='font-medium w-full text-dark/50 md:text-sm'>
                 {info}
             </p>
         </motion.div>
@@ -65,15 +65,15 @@ const About = () => {
     )
 
     return (
-        <div className='pt-4 about overflow-x-hidden'>
-        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4  `} /></motion.h2>
+        <div className='pt-4  about overflow-x-hidden bg-about pb-5'>
+        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4 text-dark `} /></motion.h2>
 
         <div className="row container mx-auto mt-5">
             <div className="col-md-8">
             <div ref={ref} className='w-[100%] mx-auto relative lg:w-[100%] md:w-full'>
             <motion.div 
             style={{scaleY: scrollYProgress}}
-            className='dark:bg-light absolute left-9 top-0 w-[4px] h-full bg-dark origin-top md:w-[2px] md:left-[30px] xs:left-[20px]'/>
+            className=' absolute left-9 top-0 w-[4px] h-full bg-dark origin-top md:w-[2px] md:left-[30px] xs:left-[20px]'/>
             <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
                 <Details
                 type="Lorem ipsum dolor sit amet " 
@@ -135,66 +135,3 @@ const About = () => {
 
 export default About
 
-// return <>
-// <div className="about container d-flex w-full flex-column align-items-center justify-content-center" id="about">
-//         <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Us" ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
-//         <div className='row w-full '>
-//             <div className="col-md-12">
-
-//                 <div className="row">
-//                     <div className='col-md-8 d-flex flex-col align-items-start justify-content-start   '>
-                        
-//                         <div class={style.info}>
-//                             <motion.div viewport={{once:true}} initial={{x:-100 , opacity:0}} whileInView={{x:0 , opacity:1}} transition={{duration:1.5}} class={style.box}>
-//                                 {/* <img decoding="async" src="images/avataaars (2).png" alt="" /> */}
-//                                 <div class={style.text}>
-//                                 <h3>Business Analysis</h3>
-//                                 <p>
-//                                     Lorem, ipsum dolor sit amet consectetur 
-//                                     adipisicing elit. Enim nesciunt obcaecati 
-//                                     quisquam quis laborum
-//                                     recusandae debitis vel
-//                                     Lorem, ipsum dolor sit amet consectetur 
-//                                 </p>
-//                                 </div>
-//                             </motion.div>
-//                             <motion.div viewport={{once:true}} initial={{x:-100 , opacity:0}} whileInView={{x:0 , opacity:1}} transition={{duration:1.7}} class={style.box}>
-//                                 {/* <img decoding="async" src="images/avataaars (2).png" alt="" /> */}
-//                                 <div class={style.text}>
-//                                 <h3>Business Analysis</h3>
-//                                 <p>
-//                                     Lorem, ipsum dolor sit amet consectetur 
-//                                     adipisicing elit. Enim nesciunt obcaecati 
-//                                     quisquam quis laborum
-//                                     recusandae debitis vel
-//                                     Lorem, ipsum dolor sit amet consectetur 
-//                                 </p>
-//                                 </div>
-//                             </motion.div>
-//                             <motion.div viewport={{once:true}} initial={{x:-100 , opacity:0}} whileInView={{x:0 , opacity:1}} transition={{duration:1.9}} class={style.box}>
-//                                 {/* <img decoding="async" src="images/avataaars (2).png" alt="" /> */}
-//                                 <div class={style.text}>
-//                                 <h3>Business Analysis</h3>
-//                                 <p>
-//                                     Lorem, ipsum dolor sit amet consectetur 
-//                                     adipisicing elit. Enim nesciunt obcaecati 
-//                                     quisquam quis laborum
-//                                     recusandae debitis vel
-//                                     Lorem, ipsum dolor sit amet consectetur 
-//                                 </p>
-//                                 </div>
-//                             </motion.div>
-                            
-//                         </div>
-//                     </div>
-//                     <div className="col-md-4 d-flex align-items-center justify-content-center">
-//                         <img className='w-100 belo' src={belo} alt="belo"  />
-//                     </div>
-//                 </div>
-                
-                
-
-//             </div>
-//         </div>
-// </div>
-// </>

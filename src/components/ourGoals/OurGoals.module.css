@@ -1,5 +1,5 @@
 
-section {
+/* section {
   padding: 30px 0px;
 }
 
@@ -79,4 +79,131 @@ span {
   background: transparent;
   color: var(--main-color);
   border-color: var(--main-color);
+} */
+
+
+.features{
+  padding-top: var(--main-padding-top);
+  padding-bottom: var(--main-padding-bottom);
+  position: relative;
+  background-color: rgb(248, 248, 248);
+  overflow-x: hidden;
+}
+
+.box{
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+ .imgHolder{
+position: relative;
+overflow: hidden;
+}
+ .imgHolder::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -14;
+  width: 100%;
+  height: 100%;
+}
+ .imgHolder::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0px 0px 130px 500px;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-transition);
+}
+ .imgHolder img{
+  max-width: 100%;
+}
+.box:hover .imgHolder::after{
+  border-width: 170px 500px 170px 0;
+}
+.box h2{
+  position: relative;
+  width: fit-content;
+  font-size: 40px;
+  margin: auto;
+  /* background-color: white; */
+}
+.box h2::after{
+content: "";
+position: absolute;
+bottom: -20px;
+left: 15px;
+height: 5px;
+width: calc(100% - 30px);
+}
+.box p{
+line-height: 2;
+font-size: 20px;
+margin: 30px 0;
+padding: 25px;
+color: #777;
+background-color: white;
+}
+.box a{
+display: block;
+border: 3px solid transparent;
+width: fit-content;
+margin: 0 auto 30px;
+padding: 1px 30px;
+font-size: 22px;
+font-weight: bold;
+border-radius: 6px;
+transition: var(--main-transition);
+}
+.quality .imgHolder::before{
+  background-color: #f43f3660;
+} 
+.quality h2::after{
+  background-color: #f44036;
+}
+.quality a{
+  color: #f44036;
+  border-color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.time .imgHolder::before{
+  background-color: rgb(0 150 136 / 50%);
+} 
+.time h2::after{
+  background-color: #009688;
+}
+.time a{
+  color: #009688;
+  border-color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.passion .imgHolder::before{
+  background-color: rgb(3 169 244 / 50%);
+} 
+.passion h2::after{
+  background-color: #03a9f4;
+}
+.passion a{
+  color: #03a9f4;
+  border-color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.box:hover a{
+  background-position: left bottom;
+  color: white;
+}
+.titleAbout{
+  /* color: rgb(53, 52, 52) !important; */
+}
+.titleAboutsm{
+  /* color: rgb(53, 52, 52) !important; */
+  font-size: 60px;
 }

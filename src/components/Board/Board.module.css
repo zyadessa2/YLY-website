@@ -5,10 +5,9 @@
   }
   .board{
     padding-bottom: 50px;
+    background-color: white;
     
 }
-
-
 
 .board .container .cards .card{
     width: 100%;
@@ -105,81 +104,5 @@
         flex-direction: row;
         width: 30% !important;
     }
-}
-
-
-
-
-
- /* .board .container .cards .card{
-    width: 100%;
-    background-color: #1b568a;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 .1rem .8rem rgb(66, 116, 163);
-    transition: .5s;
-    overflow: hidden;
-    position: relative;
-}
-
-
-.board .container .cards .card img{
-    width: 100%;
-    position: relative;
-    border-radius: 10px;
-}
-.board .container .cards .card h3{
-    color: rgb(226, 225, 225);
-    font-size: 18.72px;
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-    margin: 10px 0px;
-}
-.board .container .cards .card span{
-    color: rgb(223, 222, 222);
-    font-size: 14px;
-    font-family: var(--sec-font);
-}
- .board .container .cards .card p{
-    color: var(--sec-text-w);
-    font-size: 15px;
-    font-family: var(--sec-font);
-    margin: 10px ;
 } 
- .board .container .socail-box {
-    background-color: #ffffff4d;
-    position: absolute;
-    top: 1.875rem;
-    right: -50px;
-    transition: .5s;
-    transition-delay: .5s;
-    border-radius: 10px;
-}
-.board .container .cards .card:hover .socail-box{
-    right: 10px;
-}
-.board .container .socail-box li a i{
-    font-size: 20px;
-    padding: 13px 13px;
-    color: #37373f66;
-    transition: .4s;
-}
-.board .container .socail-box li a i:hover{
-    color: #212529;
-}
 
-@media (max-width:470px) {
-    .sizeTop{
-        display: flex;
-        flex-direction: row;
-        width: 50% !important;
-    }
-  }
-
-@media (max-width:470px) {
-    .size{
-        display: flex;
-        flex-direction: row;
-        width: 30% !important;
-    }
-}} */

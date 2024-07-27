@@ -5,6 +5,7 @@
   overflow: hidden;
   position: relative;
   z-index: -1;
+  background-color: #c2c2c2;
 } 
 .carousel .list .item{
   width: 100%;
@@ -39,6 +40,7 @@
   font-size: 5em;
   font-weight: bold;
   line-height: 1.3em;
+  color: #eee;
 }
 .carousel .list .item .topic{
   color: #fe8f01;

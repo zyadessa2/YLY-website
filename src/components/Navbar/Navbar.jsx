@@ -91,7 +91,7 @@ const Navbar = () => {
   return <>
 
 
-<header className= {`${style.header} relative  z-10 lg:px-16 md:px-12 sm:px-8  w-full px-32 py-8 font-medium flex items-center justify-between`} >
+<header className= {`${style.header} relative z-10 lg:px-16 md:px-12 sm:px-8  w-full px-32 py-8 font-medium flex items-center justify-between`} >
 
 <button className='hidden lg:flex  flex-col justify-center items-center' onClick={handelClick}>
   <span className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm -translate-y-0.5 ${isOpen ? 'rotate-45 translate-y-0.5' : "-translate-y-0.5"}`}></span>
@@ -192,8 +192,11 @@ className='z-30 login rounded-lg backdrop-blur-md py-[70px] min-w-[70vw] flex fl
       <Link to="/login" title="Log Out" className='mx-3 text-decoration-none text-black' onClick={() => { signOut(auth); handleSignOut();}}>Log Out</Link>
       <span className='mx-3 text-decoration-none text-black'>Hello {currentUser?.displayName}</span>
         </> : <>
-      <CustomLink to="/login" title="login" className='mx-3 text-decoration-none text-white' toggle={handelClick}/>
-      <CustomLink to="/signup" title="signup" className='mx-2 text-decoration-none text-white' toggle={handelClick}/>
+      <div className='mt-3'>
+        <CustomLink to="/login" title="login" className='mx-3 text-decoration-none text-white' toggle={handelClick}/>
+        <CustomLink to="/signup" title="signup" className='mx-2 text-decoration-none text-white' toggle={handelClick}/>
+      </div>
+      
     </>}
 
   </nav>

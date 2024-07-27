@@ -92,7 +92,7 @@ const AllEvents = () => {
   
         return <>
         <div class={`${style.articles} articals`} id="news">
-        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="events All " ClassName={`${style.titleAbout} mb-4 mt-4  text-white`} /></motion.h2>
+        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="events All " ClassName={`${style.titleAbout} mb-4 mt-4  text-dark`} /></motion.h2>
           {Flag?<>
             <div class={`${style.container} row d-flex justify-content-center g-3 m-auto align-items-center container`}>
             {events.map(event => (
@@ -114,39 +114,68 @@ const AllEvents = () => {
             </div>
             
             </Link>
+            
           </motion.div>
             ))}
             
           </div>
-          </> : <>
-          <div class={`${style.container} container m-auto row d-flex justify-content-between align-items-center`}>
-          <Slider {...settings} >
-          {events.map(event => (
+          </> : 
+          <>
+          <div class={`${style.container} row d-flex justify-content-center g-3 m-auto align-items-center container`}>
+            {events.map(event => (
           <motion.div
             key={event.id}
-            // viewport={{ once: true }}
-            // initial={{ x: -50, opacity: 0 }}
-            // whileInView={{ x: 0, opacity: 1 }}
-            // transition={{ duration: 1.4 }}
+            
             className={`${style.box} col-md-3 m-4`}
           >
               {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(event.id)}>Delete</button>:<></>}
-              <Link className='text-decoration-none' to={`/eventDetails/${event.id}`}>
-            <img src={event?.eventCoverUrl} alt={event.title} />
+            <Link className='text-decoration-none' to={`/eventDetails/${event.id}`}>
+            <img src={event.eventCoverUrl} alt={event.title} />
             <div className={style.content}>
               <h3>{event.title}</h3>
               <p>{event.briefParagraph}</p>
             </div>
+              
             <div className={`${style.info} d-flex align-items-center justify-content-between`}>
-              <span className='fw-bold text-white'>Write By <span className='text-danger fw-bold'>{event.writerName}</span></span>
-              <Link to={`/articalDetails/${event.id}`}>Read more</Link>
+              <Link to={`/eventDetails/${event.id}`}>Read more</Link>
             </div>
+            
             </Link>
+            
           </motion.div>
-          ))}
-          </Slider>
+            ))}
+            
           </div>
           </>
+          // <>
+          // <div class={`${style.container} container m-auto row d-flex justify-content-between align-items-center`}>
+          // {/* <Slider {...settings} > */}
+          // {events.map(event => (
+          // <motion.div
+          //   key={event.id}
+          //   // viewport={{ once: true }}
+          //   // initial={{ x: -50, opacity: 0 }}
+          //   // whileInView={{ x: 0, opacity: 1 }}
+          //   // transition={{ duration: 1.4 }}
+          //   className={`${style.box} col-md-3 m-4`}
+          // >
+          //     {flagAdmin?<button className='btn btn-danger' onClick={() => handleDelete(event.id)}>Delete</button>:<></>}
+          //     <Link className='text-decoration-none' to={`/eventDetails/${event.id}`}>
+          //   <img src={event?.eventCoverUrl} alt={event.title} />
+          //   <div className={style.content}>
+          //     <h3>{event.title}</h3>
+          //     <p>{event.briefParagraph.split(' ').slice(0, 27).join(' ') + '...'}</p>
+          //   </div>
+          //   <div className={`${style.info} d-flex align-items-center justify-content-between`}>
+          //     <span className='fw-bold text-white'>Write By <span className='text-danger fw-bold'>{event.writerName}</span></span>
+          //     <Link to={`/articalDetails/${event.id}`}>Read more</Link>
+          //   </div>
+          //   </Link>
+          // </motion.div>
+          // ))}
+          // {/* </Slider> */}
+          // </div>
+          // </>
           }
           
         </div>

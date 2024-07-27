@@ -7,6 +7,7 @@ import Board from '../../components/Board/Board'
 import LatestEvents from '../../components/LatestEvents/LatestEvents'
 import Governments from '../../components/Governments/Governments'
 import TransitionEffect from '../../components/TransitionEffect'
+import State from '../../components/state/State'
 
 const Home = () => {
 
@@ -14,14 +15,15 @@ const Home = () => {
 
   return <>
   <TransitionEffect/>
-  <div className="body ">
+  <div className="body overflow-x-hidden ">
       <Hero/>
       <About/>
-      <Governments/>
+      {/* <State/> */}
+      {/* <Governments/> */}
       <OurGoals/>
       <News/>
       <LatestEvents/>
-      <Board/>
+      {/* <Board/> */}
     </div>
     </>
 }

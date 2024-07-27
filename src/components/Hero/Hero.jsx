@@ -9,7 +9,7 @@ const Hero = () => {
     <div class={style.carousel}>
         <div class={style.list}>
             <div class={style.item}>
-                <img src={img}/>
+                {/* <img src={img}/> */}
                 <div class={style.content}>
                     <div class={style.author}>Welcome To</div>
                     <div class={style.title}>YLY</div>
@@ -20,7 +20,7 @@ const Hero = () => {
                 </div>
             </div>
         </div>
-        <div class={style.thumbnail}>
+        {/* <div class={style.thumbnail}>
             <div class={style.item}>
                 <img src={img}/>
                 <div class={style.content}>
@@ -55,27 +55,9 @@ const Hero = () => {
                 </div>
             </div>
             
-        </div>
-
+        </div> */}
         <div class={style.time}></div>
     </div>
-  {/* <div class={`${style.landing} hero`} >
-          <div class={`${style.container} container`}>
-            
-              <div class={`${style.text}`}>
-                  <h1>welcome to YLY family</h1>
-                  <p>Lorem ipsum dolor sit amet consectetur,
-                    alias quia dolores labore odit aliquam sed temporibus modi vel commodi?</p>
-              </div>
-
-              <div class={`${style.image} `}>
-                  <img src={img}lo" />
-              </div>
-          </div>
-          <a href="#about" class={style.goDown}>
-              <i class="fas fa-angle-double-down fa-2x"></i>
-          </a>
-      </div> */}
   </>
 }
 

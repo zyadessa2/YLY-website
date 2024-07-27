@@ -20,11 +20,11 @@ const Details = ({type , time , place , info }) =>{
         whileInView={{y:0}}
         transition={{duration:0.5 , type:"spring"}}
         >
-            <h3 className='capitalize font-bold text-2xl text-light sm:text-xl xs:text-lg'>{type}</h3>
-            <span className='capitalize font-medium text-light/75 xs:text-sm'>
+            <h3 className='capitalize font-bold text-2xl text-dark sm:text-xl xs:text-lg'>{type}</h3>
+            <span className='capitalize font-medium text-dark/75 xs:text-sm'>
                 {time} | {place}
             </span >
-            <p className='font-medium w-full text-light/50 md:text-sm'>
+            <p className='font-medium w-full text-dark/50 md:text-sm'>
                 {info}
             </p>
         </motion.div>
@@ -43,8 +43,8 @@ const TheMinistry = () => {
     )
 
     return (
-        <div className='py-4 about overflow-x-hidden'>
-        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Ministry" ClassName={`${style.titleAbout} mb-4 mt-4  `} /></motion.h2>
+        <div className='py-4 about bg-light overflow-x-hidden'>
+        <motion.h2 viewport={{once:true}} initial={{scale:.5 , opacity:0}} whileInView={{scale:1 , opacity:1  }} transition={{duration:1.4}}><AnimatedText text="About Ministry" ClassName={`${style.titleAbout} mb-4 mt-4 text-dark `} /></motion.h2>
 
         <div className="row container mx-auto mt-5">
             <div className="col-md-8">

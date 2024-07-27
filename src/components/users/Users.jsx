@@ -64,8 +64,6 @@ const [userData, setUserData] = useState([]);
     },
   ]
 
-
-
   const [rec, setRec] = useState(userData)
   useEffect(() => {
     setRec(userData);

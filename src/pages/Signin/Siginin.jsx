@@ -213,10 +213,10 @@ const Siginin = () => {
     </head>
     <TransitionEffect/>
     <main>
-    <div className="login bg-dark vh-100 ">
+    <div className="login bg-dark  ">
         <div className="row  justify-content-center align-items-center">
           <div className="col-md-7 d-flex flex-column align-items-center justify-content-center">
-          <form onSubmit={handleSubmit} className={`${style.formLogin} d-flex flex-column align-items-center w-75 mt-5 p-4`} >
+          <form onSubmit={handleSubmit} className={`${style.formLogin} bg-light/75 d-flex flex-column align-items-center w-75 mt-5 p-4`} >
           <h3 className='h1 pb-2 text-white'>Sign up</h3>
                     <input type="text" className='mb-1 form-control borderinput' placeholder='الاسم' {...formik.getFieldProps('name')}/>
                     {formik.touched.name && formik.errors.name ? <div className='text-danger fw-bold'>{formik.errors.name}</div> : null}
@@ -244,7 +244,13 @@ const Siginin = () => {
                     {/* </div> */}
                     <input type="text" className='mb-1 form-control borderinput' placeholder='اكتب الكود ' {...formik.getFieldProps('code')}/>
                     {formik.touched.code && formik.errors.code ? <div className='text-danger fw-bold'>{formik.errors.code}</div> : null}
-                    <button className='mt-3 mb-3 btn ylyBlueBg btn-primary w-100 text-white '>Sign up</button>
+                    {/* <button className='mt-3 mb-3 btn ylyBlueBg btn-primary w-100 text-white '>Sign up</button> */}
+                    <button className='m-auto upButn w-100'>
+                      <a className='text-dark' href="#">
+                              SEND
+                          <span></span>
+                      </a>
+                    </button>
             {err && <span>somthing went wrong</span>}
           </form>
           <p className='ps-4 pt-3 pb-1 fs-5 noaccount text-white'>Have an account? <Link className='ylyBlue' to='/login'>Sign in</Link></p>

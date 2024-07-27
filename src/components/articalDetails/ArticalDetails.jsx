@@ -18,7 +18,7 @@ const Details = ({ info }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <p className='fs-4 w-full text-light '>
+        <p className='fs-4 w-full text-dark '>
           {info}
         </p>
       </motion.div>
@@ -70,7 +70,7 @@ const ArticalDetails = () => {
             <div className="imageCover d-flex flex-col justify-center align-items-center">
               <img className='rounded' src={article.coverImageUrl} alt={article.title} />
             </div>
-            <div className="writer text-light">
+            <div className="writer text-dark/75">
               <h2>{article.title}</h2>
               <h5 className='h3'>كتب/ {article.writerName}</h5>
             </div>
